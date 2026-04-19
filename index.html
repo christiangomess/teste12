@@ -775,14 +775,23 @@
             font-weight: 800;
             font-size: 26px;
             text-align: center;
-            margin-bottom: 24px;
+            margin-bottom: 12px;
             text-transform: uppercase;
+        }
+
+        .pricing-subtitle {
+            text-align: center;
+            font-size: 15px;
+            color: #4B5563;
+            margin-bottom: 24px;
+            font-weight: 600;
         }
 
         .pricing-container {
             display: flex;
-            flex-direction: column;
-            gap: 20px;
+            flex-direction: column-reverse;
+            /* Reversa ordem no mobile - basic sobe */
+            gap: 16px;
             width: 100%;
             max-width: 900px;
             align-items: center;
@@ -795,11 +804,17 @@
 
             .pricing-section-title {
                 font-size: 32px;
+                margin-bottom: 8px;
+            }
+
+            .pricing-subtitle {
+                font-size: 18px;
                 margin-bottom: 40px;
             }
 
             .pricing-container {
                 flex-direction: row;
+                /* Restaura premium esq, basico dir no Desktop */
                 align-items: stretch;
                 justify-content: center;
                 gap: 32px;
@@ -809,7 +824,7 @@
         .pricing-card {
             background: #ffffff;
             border-radius: 12px;
-            padding: 24px 20px;
+            padding: 14px 14px;
             width: 100%;
             max-width: 420px;
             position: relative;
@@ -826,7 +841,7 @@
 
         .pricing-card.premium {
             border: 2px solid #22C55E;
-            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.15);
+            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.15);
         }
 
         .pricing-card.basic {
@@ -835,14 +850,14 @@
 
         .tag-best-seller {
             position: absolute;
-            top: -14px;
+            top: -12px;
             left: 50%;
             transform: translateX(-50%);
             background: #22C55E;
             color: #fff;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 800;
-            padding: 4px 16px;
+            padding: 4px 12px;
             border-radius: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -850,11 +865,11 @@
         }
 
         .pricing-card-title {
-            font-size: 18px;
+            font-size: 15px;
             font-weight: 800;
             text-align: center;
             color: #333;
-            margin-bottom: 12px;
+            margin-bottom: 2px;
             text-transform: uppercase;
         }
 
@@ -862,20 +877,20 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 0;
         }
 
         .price-old {
-            font-size: 14px;
+            font-size: 12px;
             color: #EF4444;
             text-decoration: line-through;
             font-weight: 600;
         }
 
         .price-current {
-            font-size: 40px;
+            font-size: 28px;
             font-weight: 800;
-            line-height: 1;
+            line-height: 1.1;
             background: linear-gradient(90deg, #22C55E, #167F3D);
             -webkit-background-clip: text;
             background-clip: text;
@@ -891,16 +906,16 @@
         }
 
         .price-sub {
-            font-size: 12px;
+            font-size: 10px;
             color: #718096;
             margin-bottom: 0;
         }
 
         .price-savings {
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 700;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 4px;
         }
 
         .pricing-card.premium .price-savings {
@@ -912,32 +927,30 @@
         }
 
         .pricing-divider {
-            height: 1px;
-            background: #e5e5e5;
-            width: 100%;
-            margin: 16px 0;
+            display: none;
         }
 
         .pricing-features {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-bottom: 16px;
+            gap: 4px;
+            margin-top: 8px;
+            margin-bottom: 8px;
         }
 
         .pricing-features li {
             display: flex;
             align-items: flex-start;
-            font-size: 13px;
-            line-height: 1.3;
+            font-size: 11px;
+            line-height: 1.15;
             color: #4B5563;
         }
 
         .pricing-features li svg {
-            width: 16px;
-            height: 16px;
-            margin-right: 8px;
+            width: 12px;
+            height: 12px;
+            margin-right: 4px;
             flex-shrink: 0;
             margin-top: 1px;
         }
@@ -950,32 +963,37 @@
             color: #9CA3AF;
         }
 
-        .bonus-title {
-            font-size: 12px;
+        .premium-bonus-box {
+            text-align: left;
+            margin-bottom: 8px;
+        }
+
+        .premium-bonus-box .bonus-title {
+            color: #166534;
+            font-size: 11px;
             font-weight: 800;
-            color: #333;
-            margin-bottom: 10px;
+            margin-bottom: 4px;
         }
 
         .bonus-list {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 4px;
         }
 
         .bonus-list li {
             display: flex;
             align-items: flex-start;
-            font-size: 13px;
-            line-height: 1.3;
+            font-size: 10px;
+            line-height: 1.15;
             font-weight: 700;
-            color: #22C55E;
+            color: #15803D;
         }
 
         .bonus-list li span.gift-icon {
-            margin-right: 8px;
-            font-size: 14px;
+            margin-right: 4px;
+            font-size: 12px;
             flex-shrink: 0;
         }
 
@@ -983,34 +1001,34 @@
             width: 100%;
             text-align: center;
             font-weight: 800;
-            font-size: 15px;
-            padding: 14px;
+            font-size: 14px;
+            padding: 10px;
             border-radius: 50px;
             text-transform: uppercase;
             text-decoration: none;
-            margin-top: 20px;
-            margin-bottom: 16px;
+            margin-top: 8px;
+            margin-bottom: 0;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 56px;
+            min-height: 44px;
         }
 
         .pricing-card.premium .card-btn {
             background: linear-gradient(180deg, #22C55E 0%, #167F3D 100%);
             color: #ffffff;
-            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
         }
 
         .pricing-card.premium .card-btn:hover {
             transform: scale(1.02) translateY(-2px);
-            box-shadow: 0 10px 25px rgba(34, 197, 94, 0.5);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
         }
 
         .pricing-card.premium .card-btn:active {
             transform: scale(0.96);
-            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+            box-shadow: 0 2px 10px rgba(34, 197, 94, 0.2);
         }
 
         .pricing-card.basic .card-btn {
@@ -1031,9 +1049,10 @@
         .security-icons {
             display: flex;
             justify-content: center;
-            gap: 12px;
+            gap: 8px;
             width: 100%;
-            margin-bottom: 8px;
+            margin-top: 8px;
+            margin-bottom: 2px;
         }
 
         .sec-item {
@@ -1044,22 +1063,23 @@
         }
 
         .sec-item svg {
-            width: 18px;
-            height: 18px;
+            width: 14px;
+            height: 14px;
             color: #9CA3AF;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .sec-item span {
-            font-size: 9px;
+            font-size: 8px;
             color: #9CA3AF;
             line-height: 1.1;
         }
 
         .security-note {
-            font-size: 10px;
+            font-size: 9px;
             color: #9CA3AF;
             text-align: center;
+            margin-top: 2px;
         }
 
         .security-note strong {
@@ -1532,21 +1552,21 @@
 
     <!-- BARRA SUPERIOR FIXA -->
     <div class="promo-bar">
-        <span class="promo-text">🕰️ PROMOÇÃO APENAS HOJE!</span>
+        <span class="promo-text">⚠️ ÚLTIMO DIA COM DESCONTO</span>
         <span class="promo-date" id="promo-date"></span>
     </div>
 
     <!-- HERO SECTION -->
     <section class="hero-section">
         <h1 class="hero-headline">
-            <span class="highlight">70 AQUECIMENTOS PRONTAS</span> PARA CORRER MAIS TEMPO SEM CANSAR + BÔNUS
+            <span class="highlight">70 AQUECIMENTOS SIMPLES</span> PRA PARAR DE CANSAR RÁPIDO AO CORRER
         </h1>
         <p class="hero-subheadline">
-            Faça por aquecimentos simples antes de correr, e corra por mais tempo sem cansar rápido!
+            Prepare seu corpo antes de correr e pare de cansar rápido, sem dor e complicação.
         </p>
         <img src="mockup3d.webp" alt="Mockup do Produto" class="hero-mockup" width="340" height="auto"
             fetchpriority="high">
-        <p class="hero-proof">🔥 +2.787 pessoas aprovaram pelos aquecimentos</p>
+        <p class="hero-proof">🔥 +2.787 pessoas já estão correndo melhor!</p>
         <a href="#precos" class="hero-cta">QUERO COMEÇAR AGORA</a>
         <div class="hero-benefits">
             <div class="hero-benefit-item">
@@ -1641,7 +1661,7 @@
 
         <!-- SEÇÃO: BÔNUS EXCLUSIVOS -->
         <section class="bonus-section">
-            <h2 class="bonus-section-title">🎁 BÔNUS EXCLUSIVOS<span>(GRÁTIS HOJE)</span></h2>
+            <h2 class="bonus-section-title">🎁 BÔNUS EXCLUSIVOS<span></span></h2>
 
             <div class="bonus-container">
                 <div class="bonus-row">
@@ -1703,14 +1723,15 @@
                 </div>
             </div>
 
-            <div class="bonus-total-block">
+            <a href="https://pay.wiapy.com/v6EqK4Li55" class="bonus-total-block"
+                style="text-decoration: none; cursor: pointer;">
                 💚 Total dos bônus: <span class="strike">R$247</span> → <strong>GRÁTIS HOJE!</strong>
-            </div>
+            </a>
         </section>
 
         <!-- SEÇÃO: ESCOLHA SEU ACESSO -->
         <section id="precos" class="pricing-section">
-            <h2 class="pricing-section-title">ESCOLHA SEU ACESSO</h2>
+            <h2 class="pricing-section-title">Escolha o melhor plano pra você 👇</h2>
             <div class="pricing-container">
 
                 <!-- CARD 1: ACESSO COMPLETO -->
@@ -1725,7 +1746,7 @@
                         <span class="price-sub">pagamento único</span>
                     </div>
 
-                    <div class="price-savings">Você economiza R$30,00 + R$247,00 em bônus</div>
+                    <div class="price-savings">Economize R$30 + R$247 em bônus</div>
 
                     <div class="pricing-divider"></div>
 
@@ -1733,19 +1754,19 @@
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> 70 Aquecimentos para evitar o cansaço rápido ao correr em vídeos + PDFs</li>
+                            </svg> 70 Aquecimentos (Vídeos + PDFs)</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> Organizadas por idade, nível e objetivo</li>
+                            </svg> Organizado por Idade e Nível</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> Acesso digital e vitalício</li>
+                            </svg> Acesso Vitalício (Nunca expira)</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> Entrega Imediata</li>
+                            </svg> Acesso Digital(Acesse Quando Quiser)</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
@@ -1753,20 +1774,23 @@
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> Garantia Estendida De 14 Dias</li>
+                            </svg> Entrega Imediata</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Garantia Estendida de 14 Dias</li>
                     </ul>
 
-                    <div class="bonus-title">BÔNUS EXCLUSIVOS QUE RECEBERÁ</div>
-                    <ul class="bonus-list">
-                        <li><span class="gift-icon">🎁</span> BÔNUS: 50 Exercícios Simples Para Melhorar o Fôlego e
-                            Cansar Menos ao Correr</li>
-                        <li><span class="gift-icon">🎁</span> BÔNUS: 50 EXERCÍCIOS DE ATIVAÇÃO MUSCULAR PARA FORÇA E
-                            ESTABILIDADE</li>
-                        <li><span class="gift-icon">🎁</span> BÔNUS: 30 EXERCÍCIOS DE MOBILIDADE PARA CORRER MAIS SOLTO
-                        </li>
-                        <li><span class="gift-icon">🎁</span> BÔNUS: Plano Simples Do Zero Aos 5KM(Sem Parar)</li>
-                        <li><span class="gift-icon">🎁</span> BÔNUS: Certificado De Reconhecimento</li>
-                    </ul>
+                    <div class="premium-bonus-box">
+                        <div class="bonus-title">🎁 + 5 BÔNUS EXCLUSIVOS</div>
+                        <ul class="bonus-list">
+                            <li><span class="gift-icon">🎁</span> BÔNUS 1: 50 Exercícios Para Fôlego</li>
+                            <li><span class="gift-icon">🎁</span> BÔNUS 2: 50 Exercícios Ativação Muscular</li>
+                            <li><span class="gift-icon">🎁</span> BÔNUS 3: 30 Exercícios de Mobilidade</li>
+                            <li><span class="gift-icon">🎁</span> BÔNUS 4: Plano Do Zero Aos 5KM</li>
+                            <li><span class="gift-icon">🎁</span> BÔNUS 5: Certificado em PDF</li>
+                        </ul>
+                    </div>
 
                     <a href="https://pay.wiapy.com/v6EqK4Li55" class="card-btn">QUERO ACESSO COMPLETO!</a>
 
@@ -1809,7 +1833,7 @@
                         <span class="price-sub">pagamento único</span>
                     </div>
 
-                    <div class="price-savings">Você economiza R$17,00</div>
+                    <div class="price-savings">Economize R$17,00</div>
 
                     <div class="pricing-divider"></div>
 
@@ -1817,19 +1841,19 @@
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> 70 Aquecimentos para evitar o cansaço rápido ao correr em PDF</li>
+                            </svg> 70 Aquecimentos (Apenas PDF)</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> Acesso digital por 15 dias</li>
+                            </svg> 15 dias de Acesso</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> Organizadas por nível e objetivo</li>
+                            </svg> Apenas Material Base</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> Sem Bônus Exclusivos❌</li>
+                            </svg> Sem Bônus Inclusos ❌</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
