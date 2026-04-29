@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>70 Aquecimentos Para Corrida</title>
+    <title>+150 Dinâmicas Lúdicas para Catequese</title>
     <script>
         (function () {
             var protocol = window.location.protocol;
@@ -30,8 +30,7 @@
     <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <meta name="description"
-        content="70 aquecimentos prontos para reduzir o cansaço e correr melhor + bônus exclusivos">
+    <meta name="description" content="Material completo, organizado e pronto para aplicar na catequese">
     <style>
         body {
             font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
@@ -46,8 +45,12 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background-color: #f5f5f5;
+            background-color: #EAF3FF;
             color: #333;
             display: flex;
             flex-direction: column;
@@ -58,9 +61,7 @@
         html.utm-blocked body>*:not(.hero-section),
         html.utm-blocked .promo-bar,
         html.utm-blocked main,
-        html.utm-blocked footer,
-        html.utm-blocked #exit-popup,
-        html.utm-blocked .exit-popup-overlay {
+        html.utm-blocked footer {
             display: none !important;
         }
 
@@ -84,7 +85,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #22C55E;
+            background-color: #3A7BD5;
             color: #ffffff;
             font-weight: 700;
             font-size: 13px;
@@ -136,7 +137,7 @@
         }
 
         .hero-headline .highlight {
-            background: linear-gradient(90deg, #22C55E, #167F3D);
+            background: linear-gradient(90deg, #3A7BD5, #2F5FA8);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -200,7 +201,7 @@
         }
 
         .hero-cta {
-            background: linear-gradient(90deg, #22C55E 0%, #167F3D 100%);
+            background: linear-gradient(90deg, #F59E0B 0%, #D97706 100%);
             color: #ffffff;
             font-weight: 700;
             font-size: 16px;
@@ -209,9 +210,12 @@
             border-radius: 50px;
             cursor: pointer;
             text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.35);
-            transition: all 0.3s ease;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 56px;
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.35);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             text-transform: uppercase;
             width: 85%;
             max-width: 360px;
@@ -219,7 +223,12 @@
 
         .hero-cta:hover {
             transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 10px 28px rgba(34, 197, 94, 0.45);
+            box-shadow: 0 10px 28px rgba(245, 158, 11, 0.45);
+        }
+
+        .hero-cta:active {
+            transform: scale(0.96);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
         }
 
         .hero-benefits {
@@ -242,7 +251,7 @@
         .hero-benefit-item svg {
             width: 16px;
             height: 16px;
-            stroke: #22C55E;
+            stroke: #3A7BD5;
             stroke-width: 2.5;
             fill: none;
         }
@@ -271,7 +280,7 @@
 
         /* 2. SEÇÃO DE GARANTIA INCONDICIONAL */
         .guarantee-section {
-            background-color: #f5f5f5;
+            background-color: #EAF3FF;
             padding: 40px 20px;
             text-align: center;
             display: flex;
@@ -296,7 +305,7 @@
             border-radius: 10px;
             /* Caso a imagem JPEG seja quadrada e precise de bordas suaves */
             mix-blend-mode: multiply;
-            /* Para misturar o fundo branco do JPEG com o #f5f5f5 do fundo */
+            /* Para misturar o fundo branco do JPEG com o #EAF3FF do fundo */
         }
 
         @media (min-width: 768px) {
@@ -307,7 +316,7 @@
         }
 
         .guarantee-title {
-            background: linear-gradient(90deg, #22C55E, #167F3D);
+            background: linear-gradient(90deg, #3A7BD5, #2F5FA8);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -343,7 +352,7 @@
 
         /* 4. BOTÃO DE CTA */
         .cta-button {
-            background: linear-gradient(180deg, #22C55E 0%, #167F3D 100%);
+            background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);
             color: #ffffff;
             font-weight: 700;
             /* Bold */
@@ -353,9 +362,12 @@
             border-radius: 50px;
             cursor: pointer;
             text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
-            transition: all 0.3s ease;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 56px;
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             text-transform: uppercase;
         }
 
@@ -367,19 +379,19 @@
         }
 
         .cta-button:hover {
-            transform: scale(1.04) translateY(-2px);
-            box-shadow: 0 12px 30px rgba(34, 197, 94, 0.6);
-            background: linear-gradient(180deg, #25D366 0%, #178841 100%);
+            transform: scale(1.02) translateY(-2px);
+            box-shadow: 0 12px 30px rgba(245, 158, 11, 0.6);
+            background: linear-gradient(180deg, #FBBF24 0%, #EA580C 100%);
         }
 
         .cta-button:active {
-            transform: scale(0.98);
-            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+            transform: scale(0.96);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
         }
 
         /* 5. RODAPÉ (FOOTER) */
         .footer {
-            background-color: #0B132B;
+            background-color: #2F5FA8;
             padding: 24px 20px;
             text-align: center;
             width: 100%;
@@ -420,7 +432,7 @@
             transform: translate(-50%, -50%);
             width: 110%;
             height: 120%;
-            background: radial-gradient(ellipse, rgba(34, 197, 94, 0.3) 0%, transparent 70%);
+            background: radial-gradient(ellipse, rgba(245, 158, 11, 0.3) 0%, transparent 70%);
             z-index: -1;
             pointer-events: none;
             opacity: 0;
@@ -431,108 +443,250 @@
             opacity: 1;
         }
 
-        /* SEÇÃO: O QUE VOCÊ VAI RECEBER */
-        .what-you-get-section {
-            background-color: #0B132B;
+        /* NOVA SEÇÃO: O QUE VOCÊ VAI RECEBER */
+        .new-what-you-get-section {
+            background-color: #EAF3FF;
             padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .what-you-get-title {
-            color: #ffffff;
+        .new-what-you-get-title {
+            color: #000000 !important;
             font-weight: 800;
+            /* ExtraBold */
             font-size: 26px;
             text-align: center;
-            margin-bottom: 24px;
-            line-height: 1.3;
+            margin-bottom: 32px;
             text-transform: uppercase;
         }
 
         @media (min-width: 768px) {
-            .what-you-get-section {
-                padding: 48px 20px;
+            .new-what-you-get-section {
+                padding: 60px 20px;
             }
 
-            .what-you-get-title {
+            .new-what-you-get-title {
                 font-size: 32px;
-                margin-bottom: 32px;
+                margin-bottom: 48px;
             }
         }
 
-        .content-card {
-            position: relative;
+        .receber-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
             width: 100%;
-            max-width: 340px;
-            margin: 0 auto;
-            border-radius: 14px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+        }
+
+        @media (min-width: 768px) {
+            .receber-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+        }
+
+        .receber-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             overflow: hidden;
-            background: #1a2745;
             display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(58, 123, 213, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        .content-img {
+        .receber-card:hover,
+        .receber-card:active {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 15px 35px rgba(58, 123, 213, 0.25) !important;
+        }
+
+        .receber-img-wrapper {
             width: 100%;
-            height: auto;
-            object-fit: cover;
-            display: block;
-            user-select: none;
-            -webkit-user-drag: none;
-            min-height: 200px;
-        }
-
-        .content-label {
-            position: absolute;
-            bottom: 12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #22C55E;
-            color: #ffffff;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 800;
-            white-space: nowrap;
-            text-transform: uppercase;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .content-cta-wrapper {
-            margin-top: 24px;
-            margin-bottom: 20px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        .content-cta {
-            background: linear-gradient(180deg, #22C55E 0%, #167F3D 100%);
-            color: #ffffff;
-            font-weight: 800;
-            font-size: 15px;
-            border-radius: 50px;
-            text-transform: uppercase;
-            text-decoration: none;
-            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.35);
-            height: 52px;
-            width: 85%;
-            max-width: 400px;
+            height: 200px;
+            background-color: #F2F7FF;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            overflow: hidden;
         }
 
-        .content-cta:hover {
-            transform: scale(1.03);
-            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.45);
+        .receber-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .receber-content {
+            padding: 24px;
+            text-align: left;
+        }
+
+        .receber-card-title {
+            color: #000000 !important;
+            font-weight: 800;
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            transition: color 0.3s ease;
+        }
+
+        .receber-card:hover .receber-card-title,
+        .receber-card:active .receber-card-title {
+            color: #3A7BD5 !important;
+        }
+
+        .receber-card-desc {
+            color: #4B5563;
+            font-size: 14px;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        /* NOVA SEÇÃO: POR QUE ESCOLHER */
+        .why-choose-section {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .why-choose-section {
+                padding: 60px 20px;
+            }
+        }
+
+        .why-choose-title {
+            color: #3A7BD5;
+            font-weight: 800;
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 12px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .why-choose-subtitle {
+            color: #4B5563;
+            font-size: 15px;
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 768px) {
+            .why-choose-title {
+                font-size: 32px;
+            }
+
+            .why-choose-subtitle {
+                font-size: 16px;
+                margin-bottom: 48px;
+            }
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        @media (min-width: 768px) {
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+        }
+
+        .why-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid rgba(58, 123, 213, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .why-card:hover,
+        .why-card:active {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(58, 123, 213, 0.15);
+        }
+
+        .icon-circle {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3A7BD5, #2F5FA8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 15px rgba(58, 123, 213, 0.3);
+        }
+
+        .icon-circle svg {
+            width: 32px;
+            height: 32px;
+            fill: none;
+            stroke: #ffffff;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .why-card-title {
+            color: #000000;
+            font-weight: 800;
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            transition: color 0.3s ease;
+        }
+
+        .why-card:hover .why-card-title,
+        .why-card:active .why-card-title {
+            color: #3A7BD5 !important;
+        }
+
+        .why-card-desc {
+            color: #4B5563;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .why-cta-container {
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (min-width: 768px) {
+            .why-cta-container {
+                margin-top: 48px;
+            }
         }
 
         /* SEÇÃO: BÔNUS EXCLUSIVOS */
         .bonus-section {
-            background-color: #ffffff;
+            background-color: #F2F7FF;
             padding: 40px 20px;
             display: flex;
             flex-direction: column;
@@ -654,7 +808,7 @@
 
         .bonus-card {
             background: #ffffff;
-            border: 2px solid #22C55E;
+            border: 2px solid #3A7BD5;
             border-radius: 14px;
             padding: 14px;
             display: flex;
@@ -662,13 +816,8 @@
             align-items: center;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease;
-        }
-
-        @media (min-width: 768px) {
-            .bonus-card:hover {
-                transform: translateY(-4px);
-            }
+            user-select: none;
+            -webkit-user-select: none;
         }
 
         .bonus-img {
@@ -678,7 +827,7 @@
             border-radius: 8px;
             object-fit: contain;
             margin-bottom: 8px;
-            background-color: #f7f7f7;
+            background-color: #F2F7FF;
         }
 
         .bonus-card-title {
@@ -706,22 +855,22 @@
 
         .bonus-free {
             font-size: 14px;
-            color: #22C55E;
+            color: #3A7BD5;
             font-weight: 800;
             text-transform: uppercase;
         }
 
         .bonus-total-block {
-            background-color: #F0FDF4;
-            border: 1px solid #BBF7D0;
-            color: #166534;
+            background-color: #F0F6FF;
+            border: 1px solid #D4E5FF;
+            color: #1E4887;
             padding: 14px 20px;
             border-radius: 50px;
             font-weight: 600;
             font-size: 16px;
             text-align: center;
             margin-top: 24px;
-            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.08);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.08);
         }
 
         .bonus-total-block .strike {
@@ -732,7 +881,7 @@
 
         .bonus-total-block strong {
             font-weight: 800;
-            color: #15803D;
+            color: #2561B0;
             text-transform: uppercase;
         }
 
@@ -750,7 +899,7 @@
 
         /* SEÇÃO: ESCOLHA SEU ACESSO */
         .pricing-section {
-            background-color: #f7f7f7;
+            background-color: #ffffff;
             padding: 40px 20px;
             display: flex;
             flex-direction: column;
@@ -762,14 +911,23 @@
             font-weight: 800;
             font-size: 26px;
             text-align: center;
-            margin-bottom: 24px;
+            margin-bottom: 12px;
             text-transform: uppercase;
+        }
+
+        .pricing-subtitle {
+            text-align: center;
+            font-size: 15px;
+            color: #4B5563;
+            margin-bottom: 24px;
+            font-weight: 600;
         }
 
         .pricing-container {
             display: flex;
-            flex-direction: column;
-            gap: 20px;
+            flex-direction: column-reverse;
+            /* Reversa ordem no mobile - basic sobe */
+            gap: 16px;
             width: 100%;
             max-width: 900px;
             align-items: center;
@@ -782,11 +940,17 @@
 
             .pricing-section-title {
                 font-size: 32px;
+                margin-bottom: 8px;
+            }
+
+            .pricing-subtitle {
+                font-size: 18px;
                 margin-bottom: 40px;
             }
 
             .pricing-container {
                 flex-direction: row;
+                /* Restaura premium esq, basico dir no Desktop */
                 align-items: stretch;
                 justify-content: center;
                 gap: 32px;
@@ -796,7 +960,7 @@
         .pricing-card {
             background: #ffffff;
             border-radius: 12px;
-            padding: 24px 20px;
+            padding: 14px 14px;
             width: 100%;
             max-width: 420px;
             position: relative;
@@ -812,8 +976,8 @@
         }
 
         .pricing-card.premium {
-            border: 2px solid #22C55E;
-            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.15);
+            border: 2px solid #3A7BD5;
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.15);
         }
 
         .pricing-card.basic {
@@ -822,14 +986,14 @@
 
         .tag-best-seller {
             position: absolute;
-            top: -14px;
+            top: -12px;
             left: 50%;
             transform: translateX(-50%);
-            background: #22C55E;
+            background: #3A7BD5;
             color: #fff;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 800;
-            padding: 4px 16px;
+            padding: 4px 12px;
             border-radius: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -837,11 +1001,11 @@
         }
 
         .pricing-card-title {
-            font-size: 18px;
+            font-size: 15px;
             font-weight: 800;
             text-align: center;
             color: #333;
-            margin-bottom: 12px;
+            margin-bottom: 2px;
             text-transform: uppercase;
         }
 
@@ -849,49 +1013,47 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 0;
         }
 
         .price-old {
-            font-size: 14px;
+            font-size: 12px;
             color: #EF4444;
             text-decoration: line-through;
             font-weight: 600;
         }
 
         .price-current {
-            font-size: 40px;
+            font-size: 28px;
             font-weight: 800;
-            line-height: 1;
-            background: linear-gradient(90deg, #22C55E, #167F3D);
+            line-height: 1.1;
+            background: linear-gradient(90deg, #3A7BD5, #2F5FA8);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
 
-        .pricing-card.premium .price-current {
-            /* Gradiente já aplicado */
-        }
+
 
         .pricing-card.basic .price-current {
             color: #111;
         }
 
         .price-sub {
-            font-size: 12px;
+            font-size: 10px;
             color: #718096;
             margin-bottom: 0;
         }
 
         .price-savings {
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 700;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 4px;
         }
 
         .pricing-card.premium .price-savings {
-            color: #22C55E;
+            color: #3A7BD5;
         }
 
         .pricing-card.basic .price-savings {
@@ -899,70 +1061,73 @@
         }
 
         .pricing-divider {
-            height: 1px;
-            background: #e5e5e5;
-            width: 100%;
-            margin: 16px 0;
+            display: none;
         }
 
         .pricing-features {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-bottom: 16px;
+            gap: 4px;
+            margin-top: 8px;
+            margin-bottom: 8px;
         }
 
         .pricing-features li {
             display: flex;
             align-items: flex-start;
-            font-size: 13px;
-            line-height: 1.3;
+            font-size: 11px;
+            line-height: 1.15;
             color: #4B5563;
         }
 
         .pricing-features li svg {
-            width: 16px;
-            height: 16px;
-            margin-right: 8px;
+            width: 12px;
+            height: 12px;
+            margin-right: 4px;
             flex-shrink: 0;
             margin-top: 1px;
         }
 
         .pricing-card.premium .pricing-features li svg {
-            color: #22C55E;
+            color: #3A7BD5;
         }
 
         .pricing-card.basic .pricing-features li svg {
             color: #9CA3AF;
         }
 
-        .bonus-title {
-            font-size: 12px;
+        .premium-bonus-box {
+            text-align: left;
+            margin-bottom: 8px;
+        }
+
+        .premium-bonus-box .bonus-title {
+            color: #1E4887;
+            font-size: 11px;
             font-weight: 800;
-            color: #333;
-            margin-bottom: 10px;
+            margin-bottom: 4px;
         }
 
         .bonus-list {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 4px;
         }
 
         .bonus-list li {
             display: flex;
             align-items: flex-start;
-            font-size: 13px;
-            line-height: 1.3;
+            font-size: 10px;
+            line-height: 1.15;
             font-weight: 700;
-            color: #22C55E;
+            color: #2561B0;
         }
 
         .bonus-list li span.gift-icon {
-            margin-right: 8px;
-            font-size: 14px;
+            margin-right: 4px;
+            font-size: 12px;
             flex-shrink: 0;
         }
 
@@ -970,29 +1135,34 @@
             width: 100%;
             text-align: center;
             font-weight: 800;
-            font-size: 15px;
-            padding: 14px;
+            font-size: 14px;
+            padding: 10px;
             border-radius: 50px;
             text-transform: uppercase;
             text-decoration: none;
-            margin-top: 20px;
-            margin-bottom: 16px;
-            transition: all 0.3s ease;
+            margin-top: 8px;
+            margin-bottom: 0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 52px;
+            min-height: 44px;
         }
 
         .pricing-card.premium .card-btn {
-            background: linear-gradient(180deg, #22C55E 0%, #167F3D 100%);
+            background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);
             color: #ffffff;
-            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
         }
 
         .pricing-card.premium .card-btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 25px rgba(34, 197, 94, 0.5);
+            transform: scale(1.02) translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        .pricing-card.premium .card-btn:active {
+            transform: scale(0.96);
+            box-shadow: 0 2px 10px rgba(245, 158, 11, 0.2);
         }
 
         .pricing-card.basic .card-btn {
@@ -1002,14 +1172,21 @@
 
         .pricing-card.basic .card-btn:hover {
             background: #e5e5e5;
+            transform: scale(1.02) translateY(-2px);
+        }
+
+        .pricing-card.basic .card-btn:active {
+            transform: scale(0.96);
+            background: #d4d4d4;
         }
 
         .security-icons {
             display: flex;
             justify-content: center;
-            gap: 12px;
+            gap: 8px;
             width: 100%;
-            margin-bottom: 8px;
+            margin-top: 8px;
+            margin-bottom: 2px;
         }
 
         .sec-item {
@@ -1020,22 +1197,23 @@
         }
 
         .sec-item svg {
-            width: 18px;
-            height: 18px;
+            width: 14px;
+            height: 14px;
             color: #9CA3AF;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .sec-item span {
-            font-size: 9px;
+            font-size: 8px;
             color: #9CA3AF;
             line-height: 1.1;
         }
 
         .security-note {
-            font-size: 10px;
+            font-size: 9px;
             color: #9CA3AF;
             text-align: center;
+            margin-top: 2px;
         }
 
         .security-note strong {
@@ -1044,7 +1222,7 @@
 
         /* SEÇÃO: PROVAS SOCIAIS */
         .testimonials-section {
-            background-color: #0B132B;
+            background-color: #2F5FA8;
             padding: 40px 20px;
             display: flex;
             flex-direction: column;
@@ -1068,7 +1246,7 @@
         }
 
         .testimonial-cta {
-            background: linear-gradient(180deg, #22C55E 0%, #167F3D 100%);
+            background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);
             color: #ffffff;
             font-weight: 800;
             font-size: 15px;
@@ -1076,17 +1254,25 @@
             border-radius: 50px;
             text-transform: uppercase;
             text-decoration: none;
-            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
-            transition: all 0.3s ease;
-            display: inline-block;
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 56px;
             width: 85%;
             max-width: 360px;
             text-align: center;
         }
 
         .testimonial-cta:hover {
-            transform: scale(1.03);
-            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5);
+            transform: scale(1.02) translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
+        }
+
+        .testimonial-cta:active {
+            transform: scale(0.96);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
         }
 
         @media (min-width: 768px) {
@@ -1149,8 +1335,8 @@
             position: absolute;
             top: calc(50% - 32px);
             background: #ffffff;
-            border: 2px solid #22C55E;
-            color: #22C55E;
+            border: 2px solid #3A7BD5;
+            color: #3A7BD5;
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -1178,9 +1364,9 @@
 
         .carousel-arrow:hover {
             opacity: 1 !important;
-            background: #22C55E;
+            background: #3A7BD5;
             color: #ffffff;
-            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
         }
 
         .carousel-arrow svg {
@@ -1230,7 +1416,7 @@
         }
 
         .carousel-dots .dot.active {
-            background-color: #22C55E;
+            background-color: #3A7BD5;
             transform: scale(1.3);
         }
 
@@ -1245,7 +1431,7 @@
         }
 
         .author-section-title {
-            background: linear-gradient(90deg, #22C55E, #167F3D);
+            background: linear-gradient(90deg, #3A7BD5, #2F5FA8);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -1286,7 +1472,7 @@
             width: 160px;
             height: 160px;
             border-radius: 50%;
-            border: 4px solid #22C55E;
+            border: 4px solid #3A7BD5;
             object-fit: cover;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
@@ -1310,7 +1496,7 @@
         }
 
         .author-tag {
-            color: #22C55E;
+            color: #3A7BD5;
             font-weight: 500;
             /* Medium */
             font-size: 13px;
@@ -1361,7 +1547,7 @@
         }
 
         .metric-number {
-            color: #22C55E;
+            color: #3A7BD5;
             font-weight: 800;
             /* ExtraBold */
             font-size: 24px;
@@ -1392,7 +1578,7 @@
 
         /* SEÇÃO: PERGUNTAS FREQUENTES (FAQ) */
         .faq-section {
-            background-color: #f7f7f7;
+            background-color: #F2F7FF;
             padding: 40px 20px;
             display: flex;
             flex-direction: column;
@@ -1400,7 +1586,7 @@
         }
 
         .faq-title {
-            background: linear-gradient(90deg, #22C55E, #167F3D);
+            background: linear-gradient(90deg, #3A7BD5, #2F5FA8);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -1457,7 +1643,7 @@
         }
 
         .faq-question:hover {
-            color: #22C55E;
+            color: #3A7BD5;
         }
 
         .faq-question svg {
@@ -1475,7 +1661,7 @@
 
         .faq-item.active .faq-question svg {
             transform: rotate(180deg);
-            color: #22C55E;
+            color: #3A7BD5;
         }
 
         .faq-answer {
@@ -1494,27 +1680,37 @@
             padding-bottom: 16px;
         }
     </style>
+
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wddp78e87q");
+    </script>
 </head>
 
 <body>
 
     <!-- BARRA SUPERIOR FIXA -->
     <div class="promo-bar">
-        <span class="promo-text">🕰️ PROMOÇÃO APENAS HOJE!</span>
+        <span class="promo-text">⚠️ ÚLTIMO DIA COM DESCONTO</span>
         <span class="promo-date" id="promo-date"></span>
     </div>
 
     <!-- HERO SECTION -->
     <section class="hero-section">
         <h1 class="hero-headline">
-            <span class="highlight">70 AQUECIMENTOS PRONTAS</span> PARA CORRER MAIS TEMPO SEM CANSAR + BÔNUS
+            <span class="highlight">+150 Dinâmicas Lúdicas</span><br> para uma Catequese Infantil<br> <span
+                class="highlight">3x Mais Envolvente</span>
         </h1>
         <p class="hero-subheadline">
-            Faça por aquecimentos simples antes de correr, e corra por mais tempo sem cansar rápido!
+            Material completo, organizado e pronto para aplicar. Economize horas de preparo e torne seus encontros mais
+            envolventes para as crianças.
         </p>
         <img src="mockup3d.webp" alt="Mockup do Produto" class="hero-mockup" width="340" height="auto"
             fetchpriority="high">
-        <p class="hero-proof">🔥 +2.787 pessoas aprovaram pelos aquecimentos</p>
+        <p class="hero-proof">🔥 +2.787 catequistas ficaram satisfeitas!</p>
         <a href="#precos" class="hero-cta">QUERO COMEÇAR AGORA</a>
         <div class="hero-benefits">
             <div class="hero-benefit-item">
@@ -1541,75 +1737,126 @@
 
     <main>
         <!-- SEÇÃO: O QUE VOCÊ VAI RECEBER -->
-        <section class="what-you-get-section">
-            <h2 class="what-you-get-title">O QUE VOCÊ VAI RECEBER</h2>
-
-            <div class="carousel-container">
-                <div class="carousel-viewport">
-                    <div class="carousel-track">
-                        <div class="carousel-slide">
-                            <div class="content-card">
-                                <img src="aqc1.webp" alt="Conteúdo 1" class="content-img" width="340" height="200"
-                                    loading="lazy" decoding="async">
-                            </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <div class="content-card">
-                                <img src="aqc2.webp" alt="Conteúdo 2" class="content-img" width="340" height="200"
-                                    loading="lazy" decoding="async">
-                            </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <div class="content-card">
-                                <img src="aqc3.webp" alt="Conteúdo 3" class="content-img" width="340" height="200"
-                                    loading="lazy" decoding="async">
-                            </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <div class="content-card">
-                                <img src="aqc4.webp" alt="Conteúdo 4" class="content-img" width="340" height="200"
-                                    loading="lazy" decoding="async">
-                            </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <div class="content-card">
-                                <img src="aqc5.webp" alt="Conteúdo 5" class="content-img" width="340" height="200"
-                                    loading="lazy" decoding="async">
-                            </div>
-                        </div>
+        <section class="new-what-you-get-section">
+            <h2 class="new-what-you-get-title">O QUE VOCÊ VAI RECEBER</h2>
+            <div class="receber-grid">
+                <!-- CARD 1 -->
+                <div class="receber-card">
+                    <div class="receber-img-wrapper">
+                        <img src="receber1.webp" alt="Dinâmicas de Acolhimento" class="receber-img" loading="lazy">
+                    </div>
+                    <div class="receber-content">
+                        <h3 class="receber-card-title">DINÂMICAS DE ACOLHIMENTO</h3>
+                        <p class="receber-card-desc">Quebre o gelo em segundos e faça cada criança se sentir especial
+                            logo ao chegar.</p>
                     </div>
                 </div>
+                <!-- CARD 2 -->
+                <div class="receber-card">
+                    <div class="receber-img-wrapper">
+                        <img src="receber2.webp" alt="Dinâmicas sobre a Bíblia" class="receber-img" loading="lazy">
+                    </div>
+                    <div class="receber-content">
+                        <h3 class="receber-card-title">DINÂMICAS SOBRE A BÍBLIA</h3>
+                        <p class="receber-card-desc">Transforme as histórias bíblicas em aventuras que as crianças vão
+                            querer ouvir de novo e de novo.</p>
+                    </div>
+                </div>
+                <!-- CARD 3 -->
+                <div class="receber-card">
+                    <div class="receber-img-wrapper">
+                        <img src="receber3.webp" alt="Dinâmicas sobre os Sacramentos" class="receber-img"
+                            loading="lazy">
+                    </div>
+                    <div class="receber-content">
+                        <h3 class="receber-card-title">DINÂMICAS SOBRE OS SACRAMENTOS</h3>
+                        <p class="receber-card-desc">Ensine Batismo, Eucaristia e Crisma de um jeito tão lúdico que as
+                            crianças vão entender e nunca esquecer.</p>
+                    </div>
+                </div>
+                <!-- CARD 4 -->
+                <div class="receber-card">
+                    <div class="receber-img-wrapper">
+                        <img src="receber4.webp" alt="Dinâmicas de Encerramento" class="receber-img" loading="lazy">
+                    </div>
+                    <div class="receber-content">
+                        <h3 class="receber-card-title">DINÂMICAS DE ENCERRAMENTO</h3>
+                        <p class="receber-card-desc">Feche cada encontro com uma experiência tão bonita que as crianças
+                            vão pra casa querendo voltar na semana seguinte.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <!-- Setas (Arrows) -->
-                <button class="carousel-arrow prev" aria-label="Anterior">
-                    <svg viewBox="0 0 24 24">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                </button>
-                <button class="carousel-arrow next" aria-label="Próximo">
-                    <svg viewBox="0 0 24 24">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
-
-                <!-- Bolinhas (Dots) -->
-                <div class="carousel-dots">
-                    <button class="dot active" data-index="0" aria-label="Slide 1"></button>
-                    <button class="dot" data-index="1" aria-label="Slide 2"></button>
-                    <button class="dot" data-index="2" aria-label="Slide 3"></button>
-                    <button class="dot" data-index="3" aria-label="Slide 4"></button>
-                    <button class="dot" data-index="4" aria-label="Slide 5"></button>
+        <!-- SEÇÃO: POR QUE ESCOLHER -->
+        <section class="why-choose-section">
+            <h2 class="why-choose-title">Por Que Escolhem Este Material?</h2>
+            <p class="why-choose-subtitle">Tudo que você precisa para conduzir encontros que as crianças amam, sem
+                improviso, sem estresse e sem perder horas planejando.</p>
+            <div class="why-grid">
+                <!-- CARD 1 -->
+                <div class="why-card">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="why-card-title">+150 Dinâmicas Testadas e Aprovadas</h3>
+                    <p class="why-card-desc">Cada dinâmica foi pensada especialmente para crianças. Lúdicas, prática e
+                        pronta pra engajar sua turma do primeiro ao último minuto.</p>
+                </div>
+                <!-- CARD 2 -->
+                <div class="why-card">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </div>
+                    <h3 class="why-card-title">Acesso Imediato e 100% Digital</h3>
+                    <p class="why-card-desc">Comprou, recebeu e aplicou no mesmo dia. Sem esperar, sem complicação, sem
+                        precisar sair de casa.</p>
+                </div>
+                <!-- CARD 3 -->
+                <div class="why-card">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                            <rect x="6" y="14" width="12" height="8"></rect>
+                        </svg>
+                    </div>
+                    <h3 class="why-card-title">Pronto Para Imprimir</h3>
+                    <p class="why-card-desc">Use direto no celular na hora do encontro ou imprima e leve na mão, do
+                        jeito que for melhor pra você.</p>
+                </div>
+                <!-- CARD 4 -->
+                <div class="why-card">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="why-card-title">Economize Horas de Preparação</h3>
+                    <p class="why-card-desc">Chega de passar noites na internet atrás de ideias. Aqui tudo já está
+                        organizado, separado por tema e pronto pra usar.</p>
                 </div>
             </div>
 
-            <div class="content-cta-wrapper">
-                <a href="#precos" class="content-cta">QUERO ACESSAR AGORA</a>
+            <div class="why-cta-container">
+                <div class="cta-wrapper">
+                    <a href="#precos" class="cta-button">QUERO COMEÇAR AGORA</a>
+                </div>
             </div>
         </section>
 
         <!-- SEÇÃO: BÔNUS EXCLUSIVOS -->
         <section class="bonus-section">
-            <h2 class="bonus-section-title">🎁 BÔNUS EXCLUSIVOS<span>(GRÁTIS HOJE)</span></h2>
+            <h2 class="bonus-section-title">🎁 BÔNUS EXCLUSIVOS<span></span></h2>
 
             <div class="bonus-container">
                 <div class="bonus-row">
@@ -1617,7 +1864,7 @@
                     <div class="bonus-card">
                         <img src="bonus1.webp" alt="Bônus 1" class="bonus-img" width="160" height="120" loading="lazy"
                             decoding="async">
-                        <h3 class="bonus-card-title">50 Exercícios Simples Para Melhorar o Fôlego</h3>
+                        <h3 class="bonus-card-title">80 Orações Dinâmicas para Catequese Infantil</h3>
                         <div class="bonus-price">
                             <span class="bonus-old-price">De R$47</span>
                             <span class="bonus-free">GRÁTIS</span>
@@ -1628,7 +1875,7 @@
                     <div class="bonus-card">
                         <img src="bonus2.webp" alt="Bônus 2" class="bonus-img" width="160" height="120" loading="lazy"
                             decoding="async">
-                        <h3 class="bonus-card-title">50 Exercícios de Ativação Muscular Para Força e Estabilidade</h3>
+                        <h3 class="bonus-card-title">60 Encontros de Catequese Prontos para Aplicar</h3>
                         <div class="bonus-price">
                             <span class="bonus-old-price">De R$47</span>
                             <span class="bonus-free">GRÁTIS</span>
@@ -1639,46 +1886,25 @@
                     <div class="bonus-card">
                         <img src="bonus3.webp" alt="Bônus 3" class="bonus-img" width="160" height="120" loading="lazy"
                             decoding="async">
-                        <h3 class="bonus-card-title">30 Exercícios de Mobilidade Para Correr Mais Solto</h3>
+                        <h3 class="bonus-card-title">Atividades Criativas Prontas Para Imprimir</h3>
                         <div class="bonus-price">
                             <span class="bonus-old-price">De R$47</span>
                             <span class="bonus-free">GRÁTIS</span>
                         </div>
                     </div>
                 </div>
-                <div class="bonus-row bonus-row-center">
-                    <!-- CARD 4 BÔNUS -->
-                    <div class="bonus-card">
-                        <img src="bonus4.webp" alt="Bônus 4" class="bonus-img" width="160" height="120" loading="lazy"
-                            decoding="async">
-                        <h3 class="bonus-card-title">Plano Simples Do Zero Aos 5KM (Sem Parar)</h3>
-                        <div class="bonus-price">
-                            <span class="bonus-old-price">De R$47</span>
-                            <span class="bonus-free">GRÁTIS</span>
-                        </div>
-                    </div>
 
-                    <!-- CARD 5 BÔNUS -->
-                    <div class="bonus-card">
-                        <img src="bonus5.webp" alt="Bônus 5" class="bonus-img" width="160" height="120" loading="lazy"
-                            decoding="async">
-                        <h3 class="bonus-card-title">Certificado De Reconhecimento Em Pdf Pronto Para Imprimir</h3>
-                        <div class="bonus-price">
-                            <span class="bonus-old-price">De R$53</span>
-                            <span class="bonus-free">GRÁTIS</span>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <div class="bonus-total-block">
-                💚 Total dos bônus: <span class="strike">R$247</span> → <strong>GRÁTIS HOJE!</strong>
-            </div>
+            <a href="https://pay.wiapy.com/2Ax2K8uZpJ" class="bonus-total-block"
+                style="text-decoration: none; cursor: pointer;">
+                💙 Total dos bônus: <span class="strike">R$141</span> → <strong>GRÁTIS HOJE!</strong>
+            </a>
         </section>
 
         <!-- SEÇÃO: ESCOLHA SEU ACESSO -->
         <section id="precos" class="pricing-section">
-            <h2 class="pricing-section-title">ESCOLHA SEU ACESSO</h2>
+            <h2 class="pricing-section-title">Escolha o melhor pra você 👇</h2>
             <div class="pricing-container">
 
                 <!-- CARD 1: ACESSO COMPLETO -->
@@ -1688,12 +1914,12 @@
                     <h3 class="pricing-card-title">ACESSO COMPLETO</h3>
 
                     <div class="price-block">
-                        <span class="price-old">De R$47,00</span>
-                        <div class="price-current">R$17,00</div>
+                        <span class="price-old">De R$67,00</span>
+                        <div class="price-current">R$27,00</div>
                         <span class="price-sub">pagamento único</span>
                     </div>
 
-                    <div class="price-savings">Você economiza R$30,00 + R$247,00 em bônus</div>
+                    <div class="price-savings">Economize R$40 + R$141 em bônus</div>
 
                     <div class="pricing-divider"></div>
 
@@ -1701,42 +1927,42 @@
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> 70 Aquecimentos para evitar o cansaço rápido ao correr em vídeos + PDFs</li>
+                            </svg> +300 Dinâmicas Lúdicas para Catequese Infantil</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> Organizadas por idade, nível e objetivo</li>
+                            </svg> Organizadas por temas(Bíblia, Sacramentos, Acolhimento e mais)</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> Acesso digital e vitalício</li>
+                            </svg> Material 100% pronto para aplicar</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> Entrega Imediata</li>
+                            </svg> Acesso vitalício (sem mensalidade)</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> Suporte Prioritário</li>
+                            </svg> Acesso digital imediato</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> Garantia Estendida De 14 Dias</li>
+                            </svg> Garantia Estendidade 14 dias</li>
                     </ul>
 
-                    <div class="bonus-title">BÔNUS EXCLUSIVOS QUE RECEBERÁ</div>
-                    <ul class="bonus-list">
-                        <li><span class="gift-icon">🎁</span> BÔNUS: 50 Exercícios Simples Para Melhorar o Fôlego e
-                            Cansar Menos ao Correr</li>
-                        <li><span class="gift-icon">🎁</span> BÔNUS: 50 EXERCÍCIOS DE ATIVAÇÃO MUSCULAR PARA FORÇA E
-                            ESTABILIDADE</li>
-                        <li><span class="gift-icon">🎁</span> BÔNUS: 30 EXERCÍCIOS DE MOBILIDADE PARA CORRER MAIS SOLTO
-                        </li>
-                        <li><span class="gift-icon">🎁</span> BÔNUS: Plano Simples Do Zero Aos 5KM(Sem Parar)</li>
-                        <li><span class="gift-icon">🎁</span> BÔNUS: Certificado De Reconhecimento</li>
-                    </ul>
+                    <div class="premium-bonus-box">
+                        <div class="bonus-title">🎁 + 3 BÔNUS EXCLUSIVOS</div>
+                        <ul class="bonus-list">
+                            <li><span class="gift-icon">🎁</span> BÔNUS 1: 80 Orações Dinâmicas para Catequese Infantil
+                            </li>
+                            <li><span class="gift-icon">🎁</span> BÔNUS 2: 60 Encontros de Catequese Prontos para
+                                Aplicar</li>
+                            <li><span class="gift-icon">🎁</span> BÔNUS 3: Atividades Criativas Prontas Para Imprimir
+                            </li>
+                        </ul>
+                    </div>
 
-                    <a href="https://pay.wiapy.com/v6EqK4Li55" class="card-btn">QUERO ACESSO COMPLETO!</a>
+                    <a href="https://pay.wiapy.com/2Ax2K8uZpJ" class="card-btn">QUERO ACESSO COMPLETO</a>
 
                     <div class="security-icons">
                         <div class="sec-item">
@@ -1777,7 +2003,7 @@
                         <span class="price-sub">pagamento único</span>
                     </div>
 
-                    <div class="price-savings">Você economiza R$17,00</div>
+                    <div class="price-savings">Economize R$17,00</div>
 
                     <div class="pricing-divider"></div>
 
@@ -1785,19 +2011,15 @@
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> 70 Aquecimentos para evitar o cansaço rápido ao correr em PDF</li>
+                            </svg> +150 Dinâmicas (somente material principal)</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> Acesso digital por 15 dias</li>
+                            </svg> Acesso digital simples</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> Organizadas por nível e objetivo</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> Sem Bônus Exclusivos❌</li>
+                            </svg> Sem bônus inclusos</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
@@ -1806,7 +2028,8 @@
 
                     <div style="flex-grow: 1;"></div>
 
-                    <a href="https://pay.wiapy.com/KbFFqFIHU4" class="card-btn">QUERO ACESSO BÁSICO</a>
+                    <a href="" class="card-btn" id="btn-basic-plan">QUERO ACESSO
+                        BÁSICO</a>
                 </div>
 
             </div>
@@ -1886,13 +2109,13 @@
 
         <!-- SEÇÃO: SOBRE O AUTOR -->
         <section class="author-section">
-            <h2 class="author-section-title">Sobre o Autor</h2>
+            <h2 class="author-section-title">Sobre a Autora</h2>
             <div class="author-container">
-                <img src="autor.webp" alt="Foto do autor Greg Rocha" class="author-image" width="160" height="160"
+                <img src="autor.webp" alt="Foto da autora Clara Mendes" class="author-image" width="160" height="160"
                     loading="lazy" decoding="async">
                 <div class="author-info">
                     <p class="author-tag">QUEM CRIOU</p>
-                    <h3 class="author-name">Greg Rocha</h3>
+                    <h3 class="author-name">Clara Mendes</h3>
 
                     <div class="author-metrics">
                         <div class="metric-item">
@@ -1900,14 +2123,15 @@
                             <span class="metric-label">de experiência</span>
                         </div>
                         <div class="metric-item">
-                            <span class="metric-number">+4500</span>
-                            <span class="metric-label">Alunos Ajudados</span>
+                            <span class="metric-number">+4.752</span>
+                            <span class="metric-label">catequistas impactados</span>
                         </div>
                     </div>
 
                     <p class="author-desc">
-                        "Dediquei minha trajetória a ajudar pessoas a evoluírem na corrida, mesmo começando do zero ou
-                        até mesmo aqueles que estão tentando."
+                        "Sou apaixonada por ensinar e tornar a catequese mais leve, participativa e significativa para
+                        as crianças. Ao longo dos anos, desenvolvi dinâmicas simples que ajudam catequistas a conduzirem
+                        encontros mais organizados e envolventes."
                     </p>
                 </div>
             </div>
@@ -1921,15 +2145,15 @@
                 <!-- FAQ 1 -->
                 <div class="faq-item">
                     <button class="faq-question">
-                        Como acessar o material?
+                        Como vou acessar o material?
                         <svg viewBox="0 0 24 24">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Assim que a compra for confirmada, você receberá imediatamente no seu e-mail um link para
-                            baixar todo o material. Basta acessar o e-mail cadastrado na compra e começar a usar.
+                            Após a compra, você recebe acesso imediato ao conteúdo no seu e-mail. Você poderá acessar
+                            pelo celular, tablet ou computador.
                         </div>
                     </div>
                 </div>
@@ -1937,16 +2161,15 @@
                 <!-- FAQ 2 -->
                 <div class="faq-item">
                     <button class="faq-question">
-                        Os Aquecimentos servem para quais níveis?
+                        O material é realmente fácil de aplicar?
                         <svg viewBox="0 0 24 24">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            O material foi desenvolvido principalmente para iniciantes, mas também atende pessoas que já
-                            tentaram correr e cansam rápido. Os treinos são progressivos e podem ser adaptados conforme
-                            o seu nível atual.
+                            Sim! Todas as dinâmicas são organizadas e explicadas passo a passo, facilitando a aplicação
+                            mesmo para quem está começando.
                         </div>
                     </div>
                 </div>
@@ -1954,15 +2177,15 @@
                 <!-- FAQ 3 -->
                 <div class="faq-item">
                     <button class="faq-question">
-                        Eu Consigo fazer esses aquecimentos em qualquer lugar?
+                        Preciso ter experiência em catequese?
                         <svg viewBox="0 0 24 24">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Sim! Os aquecimentos podem ser feitos em rua, parque, esteira ou qualquer espaço disponível.
-                            Você não precisa de equipamentos específicos, apenas seguir o passo a passo.
+                            Não. O material foi pensado para ajudar tanto iniciantes quanto catequistas mais
+                            experientes.
                         </div>
                     </div>
                 </div>
@@ -1970,15 +2193,14 @@
                 <!-- FAQ 4 -->
                 <div class="faq-item">
                     <button class="faq-question">
-                        Preciso já ter experiência com corrida?
+                        As dinâmicas servem para diferentes idades?
                         <svg viewBox="0 0 24 24">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Não. O plano foi pensado justamente para quem está começando do zero ou não consegue correr
-                            por muito tempo. Tudo é explicado de forma simples e prática para facilitar sua evolução.
+                            Sim! As atividades são adaptáveis e funcionam com diferentes faixas etárias.
                         </div>
                     </div>
                 </div>
@@ -1986,15 +2208,29 @@
                 <!-- FAQ 5 -->
                 <div class="faq-item">
                     <button class="faq-question">
-                        Como funciona a garantia?
+                        O material é físico ou digital?
                         <svg viewBox="0 0 24 24">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Você pode testar o material por 7 dias. Se não ficar satisfeito, basta solicitar o reembolso
-                            e devolvemos 100% do seu dinheiro, sem burocracia.
+                            O material é 100% digital, podendo ser acessado online ou impresso, se preferir.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Tem garantia?
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Sim! Você tem 7 dias de garantia para testar o material com total segurança.
                         </div>
                     </div>
                 </div>
@@ -2022,387 +2258,247 @@
 
     <!-- 5. RODAPÉ (FOOTER) -->
     <footer class="footer" id="footer-content">
-        <div class="footer-text">© 2026 Greg Rocha. Todos os direitos reservados.</div>
-        <div class="footer-text">Material licenciado para uso profissional para aquecimentos de corrida.</div>
+        <div class="footer-text">© 2026 Clara Mendes. Todos os direitos reservados.</div>
+        <div class="footer-text">Material desenvolvido para apoiar catequistas na condução de encontros mais
+            organizados, leves e envolventes.</div>
     </footer>
 
-    <!-- Popup de Saída (Exit Intent) -->
-    <div id="exit-popup" class="exit-popup-overlay" style="display: none;">
-        <div class="exit-popup-container">
-            <button class="exit-popup-close" aria-label="Fechar">&times;</button>
-
-            <div class="exit-popup-badge">
-                <span class="exit-popup-icon">🎉</span>
-                <span>OFERTA ESPECIAL</span>
-            </div>
-
-            <h2 class="exit-popup-title">Espera! Não saia ainda 👇</h2>
-            <p class="exit-popup-subtitle">Liberei uma condição especial para você garantir pelo menor preço hoje.</p>
-
-            <div class="exit-popup-card">
-                <h3 class="exit-popup-card-title">Acesso Completo com Desconto</h3>
-                <p class="exit-popup-card-desc">70 aquecimentos + bônus exclusivos</p>
-                <div class="exit-popup-prices">
-                    <span class="exit-popup-old-price">De R$17,00</span>
-                    <span class="exit-popup-new-price">R$8,90</span>
-                </div>
-            </div>
-
-            <a href="https://pay.wiapy.com/kGrLon4GeM" class="exit-popup-btn" target="_blank" rel="noopener noreferrer">
-                QUERO APROVEITAR AGORA
-            </a>
-
-            <button class="exit-popup-btn-secondary">
-                Não, quero continuar pagando mais caro
-            </button>
-        </div>
-    </div>
-
     <style>
-        .exit-popup-overlay {
+        /* MODAL UPSELL */
+        .modal-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 9999;
+            background: rgba(0, 0, 0, 0.85);
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            z-index: 99999;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.4s ease, visibility 0.4s ease;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(6px);
         }
 
-        .exit-popup-overlay.active {
+        .modal-overlay.active {
             opacity: 1;
             visibility: visible;
         }
 
-        .exit-popup-overlay.active .exit-popup-container {
-            transform: translateY(0);
-        }
-
-        .exit-popup-container {
+        .modal-content {
             background: #ffffff;
+            width: 90%;
+            max-width: 480px;
             border-radius: 16px;
             padding: 32px 24px;
-            max-width: 400px;
-            width: 100%;
             position: relative;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-            transform: translateY(20px);
-            transition: transform 0.4s ease;
+            transform: scale(0.95) translateY(20px);
+            transition: all 0.3s ease;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
+            max-height: 90vh;
+            overflow-y: auto;
+            font-family: 'Poppins', sans-serif;
         }
 
-        .exit-popup-close {
+        .modal-overlay.active .modal-content {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-close {
             position: absolute;
-            top: 12px;
-            right: 12px;
+            top: 16px;
+            right: 16px;
             background: none;
             border: none;
             font-size: 28px;
             color: #9CA3AF;
             cursor: pointer;
+            transition: color 0.2s;
             line-height: 1;
-            padding: 4px 8px;
-            transition: color 0.2s ease;
+            padding: 4px;
+            z-index: 10;
         }
 
-        .exit-popup-close:hover {
-            color: #4B5563;
+        .modal-close:hover {
+            color: #333;
         }
 
-        .exit-popup-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: linear-gradient(90deg, #22C55E 0%, #167F3D 100%);
-            color: #ffffff;
+        .modal-badge {
+            background: #EFF6FF;
+            color: #3A7BD5;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 14px;
             font-weight: 800;
-            font-size: 11px;
-            padding: 6px 14px;
-            border-radius: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
             margin-bottom: 16px;
+            text-transform: uppercase;
         }
 
-        .exit-popup-icon {
-            font-size: 14px;
-        }
-
-        .exit-popup-title {
-            font-weight: 800;
-            font-size: 22px;
+        .modal-title {
             color: #111827;
-            margin-bottom: 10px;
-            line-height: 1.3;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.2;
         }
 
-        .exit-popup-subtitle {
-            font-size: 14px;
+        .modal-subtitle {
             color: #4B5563;
-            margin-bottom: 20px;
+            font-size: 15px;
+            margin-bottom: 24px;
             line-height: 1.4;
         }
 
-        .exit-popup-card {
-            background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
-            border: 2px solid #22C55E;
+        .modal-card-inner {
+            background: #F4F8FF;
+            border: 2px solid #3A7BD5;
             border-radius: 12px;
             padding: 20px;
-            margin-bottom: 20px;
+            width: 100%;
+            margin-bottom: 24px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(58, 123, 213, 0.08);
         }
 
-        .exit-popup-card-title {
-            font-weight: 800;
-            font-size: 16px;
+        .modal-card-inner-title {
             color: #111827;
-            margin-bottom: 6px;
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 8px;
         }
 
-        .exit-popup-card-desc {
-            font-size: 13px;
+        .modal-card-inner-desc {
             color: #4B5563;
-            margin-bottom: 12px;
+            font-size: 14px;
+            margin-bottom: 16px;
+            line-height: 1.4;
         }
 
-        .exit-popup-prices {
+        .modal-price {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
         }
 
-        .exit-popup-old-price {
-            font-size: 14px;
-            color: #EF4444;
+        .modal-price-old {
+            color: #9CA3AF;
             text-decoration: line-through;
+            font-size: 16px;
             font-weight: 600;
         }
 
-        .exit-popup-new-price {
-            font-size: 28px;
+        .modal-price-new {
+            color: #3A7BD5;
+            font-size: 26px;
             font-weight: 800;
-            background: linear-gradient(90deg, #22C55E, #167F3D);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
         }
 
-        .exit-popup-btn {
-            display: block;
-            width: 100%;
-            background: linear-gradient(180deg, #22C55E 0%, #167F3D 100%);
+        .modal-cta {
+            background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);
             color: #ffffff;
-            font-weight: 700;
-            font-size: 15px;
+            font-weight: 800;
+            font-size: 16px;
             padding: 16px 24px;
             border: none;
             border-radius: 50px;
             cursor: pointer;
             text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 56px;
+            width: 100%;
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             text-transform: uppercase;
-            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
-            transition: all 0.3s ease;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
-        .exit-popup-btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5);
+        .modal-cta:hover {
+            transform: scale(1.02) translateY(-2px);
+            box-shadow: 0 12px 30px rgba(245, 158, 11, 0.6);
+            background: linear-gradient(180deg, #FBBF24 0%, #EA580C 100%);
         }
 
-        .exit-popup-btn-secondary {
+        .modal-secondary-btn {
             background: none;
             border: none;
-            color: #9CA3AF;
-            font-size: 12px;
-            cursor: pointer;
-            padding: 8px;
-            transition: color 0.2s ease;
-        }
-
-        .exit-popup-btn-secondary:hover {
             color: #6B7280;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: underline;
+            transition: color 0.2s;
+            font-family: inherit;
         }
 
-        @media (max-width: 480px) {
-            .exit-popup-container {
-                padding: 28px 20px;
-            }
-
-            .exit-popup-title {
-                font-size: 20px;
-            }
-
-            .exit-popup-btn {
-                font-size: 14px;
-                padding: 14px 20px;
-            }
-
-            .exit-popup-new-price {
-                font-size: 24px;
-            }
+        .modal-secondary-btn:hover {
+            color: #374151;
         }
     </style>
 
+    <!-- UPSELL MODAL -->
+    <div class="modal-overlay" id="upsell-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <div class="modal-badge">🎉 OFERTA ESPECIAL</div>
+            <h2 class="modal-title">Espera! Não saia ainda 👇</h2>
+            <p class="modal-subtitle">Liberei uma condição especial para você garantir pelo melhor custo-benefício hoje.
+            </p>
+
+            <div class="modal-card-inner">
+                <h3 class="modal-card-inner-title">Acesso Completo com Bônus</h3>
+                <p class="modal-card-inner-desc">+150 dinâmicas lúdicas + 3 bônus exclusivos</p>
+                <div class="modal-price">
+                    <span class="modal-price-old">De R$67,00</span>
+                    <span class="modal-price-new">R$17,00</span>
+                </div>
+            </div>
+
+            <a href="https://pay.wiapy.com/drqTyWXNDG" class="modal-cta" target="_blank" rel="noopener noreferrer">QUERO
+                O ACESSO COMPLETO</a>
+            <a href="https://pay.wiapy.com/tG1kplN20K" class="modal-secondary-btn" id="modal-continue-basic">Não, quero
+                continuar pagando mais caro</a>
+        </div>
+    </div>
+
     <script>
-        (function () {
-            const popup = document.getElementById('exit-popup');
-            const closeBtn = popup.querySelector('.exit-popup-close');
-            const secondaryBtn = popup.querySelector('.exit-popup-btn-secondary');
-            const mainBtn = popup.querySelector('.exit-popup-btn');
+        document.addEventListener('DOMContentLoaded', function () {
+            const basicBtn = document.getElementById('btn-basic-plan');
+            const modal = document.getElementById('upsell-modal');
+            const closeBtn = document.getElementById('modal-close-btn');
+            const continueBasic = document.getElementById('modal-continue-basic');
 
-            const sessionKey = 'exitPopupShown';
-            let hasShown = sessionStorage.getItem(sessionKey) === 'true';
-            let popupActive = false;
-            let isGoingBack = false;
-            let isInternalClick = false;
+            if (!basicBtn || !modal) return;
 
-            function showPopup() {
-                if (hasShown || popupActive || isInternalClick) return;
-                popupActive = true;
-                hasShown = true;
-                sessionStorage.setItem(sessionKey, 'true');
-                popup.style.display = 'flex';
-                setTimeout(() => {
-                    popup.classList.add('active');
-                }, 10);
+            basicBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                modal.classList.add('active');
+            });
+
+            function closeModal() {
+                modal.classList.remove('active');
             }
 
-            function markCheckoutIntent() {
-                sessionStorage.setItem('checkout_saida', 'true');
-            }
+            closeBtn.addEventListener('click', closeModal);
 
-            function markPageHidden() {
-                if (sessionStorage.getItem('checkout_saida') === 'true') {
-                    sessionStorage.setItem('checkout_saiu', 'true');
-                }
-            }
-
-            window.addEventListener('pagehide', markPageHidden);
-
-            window.addEventListener('pageshow', function(event) {
-                if (event.persisted || sessionStorage.getItem('checkout_saiu') === 'true') {
-                    sessionStorage.removeItem('checkout_saiu');
-                    sessionStorage.removeItem('checkout_saida');
-                    setTimeout(function() {
-                        showPopup();
-                    }, 1200);
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    closeModal();
                 }
             });
 
-            function hidePopup() {
-                popupActive = false;
-                popup.classList.remove('active');
-                setTimeout(() => {
-                    popup.style.display = 'none';
-                    if (isGoingBack) {
-                        isGoingBack = false;
-                        window.history.back();
-                    }
-                }, 400);
-            }
-
-            function isInternalLink(element) {
-                if (!element) return false;
-                if (element.tagName === 'A') {
-                    const href = element.getAttribute('href');
-                    if (!href) return true;
-                    if (href.startsWith('#')) return true;
-                    if (href.startsWith(window.location.origin + window.location.pathname)) return true;
-                    if (href.startsWith('http') && href.includes(window.location.hostname)) return true;
-                }
-                return false;
-            }
-
-            function isInternalButton(element) {
-                if (!element) return false;
-                if (element.tagName === 'BUTTON' || element.tagName === 'A') {
-                    return element.classList.contains('cta-button') ||
-                        element.classList.contains('hero-cta') ||
-                        element.classList.contains('content-cta') ||
-                        element.classList.contains('card-btn') ||
-                        element.getAttribute('href')?.startsWith('#');
-                }
-                return false;
-            }
-
-            document.addEventListener('click', function (e) {
-                const target = e.target.closest('button, a');
-                if (target && (isInternalLink(target) || isInternalButton(target))) {
-                    isInternalClick = true;
-                    setTimeout(() => {
-                        isInternalClick = false;
-                    }, 3000);
-                }
-            }, true);
-
-            closeBtn.addEventListener('click', hidePopup);
-            secondaryBtn.addEventListener('click', hidePopup);
-
-            popup.addEventListener('click', function (e) {
-                if (e.target === popup) {
-                    hidePopup();
-                }
+            continueBasic.addEventListener('click', function () {
+                closeModal();
+                window.location.href = basicBtn.href;
             });
-
-            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-            if (isMobile) {
-                window.addEventListener('popstate', function (e) {
-                    if (!hasShown && !popupActive && !isInternalClick) {
-                        e.preventDefault();
-                        isGoingBack = true;
-                        showPopup();
-                        history.pushState(null, null, window.location.href);
-                    }
-                });
-
-                document.addEventListener('click', function (e) {
-                    const link = e.target.closest('a');
-                    if (link && !isInternalLink(link)) {
-                        if (!hasShown) {
-                            e.preventDefault();
-                            isGoingBack = false;
-                            showPopup();
-                        }
-                    }
-                }, true);
-            } else {
-                let mouseLeft = false;
-
-                document.addEventListener('mouseleave', function (e) {
-                    if (e.clientY <= 0 && !mouseLeft && !popupActive) {
-                        mouseLeft = true;
-                        if (!isInternalClick) {
-                            showPopup();
-                        }
-                    }
-                });
-
-                document.addEventListener('mouseenter', function (e) {
-                    if (e.clientY > 0) {
-                        mouseLeft = false;
-                    }
-                });
-            }
-
-            mainBtn.addEventListener('click', function () {
-                hidePopup();
-            });
-
-            document.querySelectorAll('a.card-btn[href*="pay"], a.hero-cta[href*="pay"], a.content-cta[href*="pay"]').forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    markCheckoutIntent();
-                });
-            });
-        })();
+        });
     </script>
 
     <!-- Scripts da página -->
@@ -2590,6 +2686,19 @@
             initCarousel();
         });
     </script>
+
+    <script>
+        window.pixelId = "69e2bcbd6ae1a8d31e69f902";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+    </script>
+
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids async defer></script>
+
 </body>
 
 </html>
