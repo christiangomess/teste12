@@ -453,8 +453,9 @@
         }
 
         .new-what-you-get-title {
-            color: #3A7BD5;
-            font-weight: 800; /* ExtraBold */
+            color: #000000 !important;
+            font-weight: 800;
+            /* ExtraBold */
             font-size: 26px;
             text-align: center;
             margin-bottom: 32px;
@@ -465,6 +466,7 @@
             .new-what-you-get-section {
                 padding: 60px 20px;
             }
+
             .new-what-you-get-title {
                 font-size: 32px;
                 margin-bottom: 48px;
@@ -494,12 +496,13 @@
             display: flex;
             flex-direction: column;
             border: 1px solid rgba(58, 123, 213, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        .receber-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(58, 123, 213, 0.15);
+        .receber-card:hover, .receber-card:active {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 15px 35px rgba(58, 123, 213, 0.25) !important;
         }
 
         .receber-img-wrapper {
@@ -515,8 +518,8 @@
         .receber-img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            padding: 16px;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
         }
 
         .receber-content {
@@ -525,11 +528,17 @@
         }
 
         .receber-card-title {
-            color: #333;
+            color: #000000 !important;
             font-weight: 800;
             font-size: 18px;
             margin-bottom: 12px;
             line-height: 1.3;
+            transition: color 0.3s ease;
+        }
+
+        .receber-card:hover .receber-card-title,
+        .receber-card:active .receber-card-title {
+            color: #3A7BD5 !important;
         }
 
         .receber-card-desc {
@@ -537,6 +546,126 @@
             font-size: 14px;
             line-height: 1.5;
             font-weight: 400;
+        }
+
+        /* NOVA SEÇÃO: POR QUE ESCOLHER */
+        .why-choose-section {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .why-choose-section {
+                padding: 60px 20px;
+            }
+        }
+
+        .why-choose-title {
+            color: #3A7BD5;
+            font-weight: 800;
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 12px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .why-choose-subtitle {
+            color: #4B5563;
+            font-size: 15px;
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 768px) {
+            .why-choose-title {
+                font-size: 32px;
+            }
+            .why-choose-subtitle {
+                font-size: 16px;
+                margin-bottom: 48px;
+            }
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        @media (min-width: 768px) {
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+        }
+
+        .why-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid rgba(58, 123, 213, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .why-card:hover, .why-card:active {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(58, 123, 213, 0.15);
+        }
+
+        .icon-circle {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3A7BD5, #2F5FA8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 15px rgba(58, 123, 213, 0.3);
+        }
+
+        .icon-circle svg {
+            width: 32px;
+            height: 32px;
+            fill: none;
+            stroke: #ffffff;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .why-card-title {
+            color: #000000;
+            font-weight: 800;
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            transition: color 0.3s ease;
+        }
+
+        .why-card:hover .why-card-title,
+        .why-card:active .why-card-title {
+            color: #3A7BD5 !important;
+        }
+
+        .why-card-desc {
+            color: #4B5563;
+            font-size: 14px;
+            line-height: 1.5;
         }
 
         /* SEÇÃO: BÔNUS EXCLUSIVOS */
@@ -1556,7 +1685,8 @@
     <!-- HERO SECTION -->
     <section class="hero-section">
         <h1 class="hero-headline">
-            <span class="highlight">+150 Dinâmicas Lúdicas</span><br> para uma Catequese Infantil<br> <span class="highlight">3x Mais Envolvente</span>
+            <span class="highlight">+150 Dinâmicas Lúdicas</span><br> para uma Catequese Infantil<br> <span
+                class="highlight">3x Mais Envolvente</span>
         </h1>
         <p class="hero-subheadline">
             Material completo, organizado e pronto para aplicar. Economize horas de preparo e torne seus encontros mais
@@ -1597,42 +1727,88 @@
                 <!-- CARD 1 -->
                 <div class="receber-card">
                     <div class="receber-img-wrapper">
-                        <img src="mockup3d.webp" alt="Dinâmicas de Acolhimento" class="receber-img" loading="lazy">
+                        <img src="receber1.webp" alt="Dinâmicas de Acolhimento" class="receber-img" loading="lazy">
                     </div>
                     <div class="receber-content">
                         <h3 class="receber-card-title">DINÂMICAS DE ACOLHIMENTO</h3>
-                        <p class="receber-card-desc">Comece seus encontros prendendo a atenção das crianças desde o primeiro minuto — sem improviso.</p>
+                        <p class="receber-card-desc">Quebre o gelo em segundos e faça cada criança se sentir especial
+                            logo ao chegar.</p>
                     </div>
                 </div>
                 <!-- CARD 2 -->
                 <div class="receber-card">
                     <div class="receber-img-wrapper">
-                        <img src="mockup3d.webp" alt="Dinâmicas sobre a Bíblia" class="receber-img" loading="lazy">
+                        <img src="receber2.webp" alt="Dinâmicas sobre a Bíblia" class="receber-img" loading="lazy">
                     </div>
                     <div class="receber-content">
                         <h3 class="receber-card-title">DINÂMICAS SOBRE A BÍBLIA</h3>
-                        <p class="receber-card-desc">Ensine as histórias bíblicas de forma leve, interativa e fácil de entender.</p>
+                        <p class="receber-card-desc">Transforme as histórias bíblicas em aventuras que as crianças vão
+                            querer ouvir de novo e de novo.</p>
                     </div>
                 </div>
                 <!-- CARD 3 -->
                 <div class="receber-card">
                     <div class="receber-img-wrapper">
-                        <img src="mockup3d.webp" alt="Dinâmicas sobre os Sacramentos" class="receber-img" loading="lazy">
+                        <img src="receber3.webp" alt="Dinâmicas sobre os Sacramentos" class="receber-img"
+                            loading="lazy">
                     </div>
                     <div class="receber-content">
                         <h3 class="receber-card-title">DINÂMICAS SOBRE OS SACRAMENTOS</h3>
-                        <p class="receber-card-desc">Explique temas importantes de forma simples e envolvente, sem complicação.</p>
+                        <p class="receber-card-desc">Ensine Batismo, Eucaristia e Crisma de um jeito tão lúdico que as
+                            crianças vão entender e nunca esquecer.</p>
                     </div>
                 </div>
                 <!-- CARD 4 -->
                 <div class="receber-card">
                     <div class="receber-img-wrapper">
-                        <img src="mockup3d.webp" alt="Dinâmicas de Encerramento" class="receber-img" loading="lazy">
+                        <img src="receber4.webp" alt="Dinâmicas de Encerramento" class="receber-img" loading="lazy">
                     </div>
                     <div class="receber-content">
                         <h3 class="receber-card-title">DINÂMICAS DE ENCERRAMENTO</h3>
-                        <p class="receber-card-desc">Finalize seus encontros com impacto e deixe uma mensagem marcante.</p>
+                        <p class="receber-card-desc">Feche cada encontro com uma experiência tão bonita que as crianças
+                            vão pra casa querendo voltar na semana seguinte.
+                        </p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: POR QUE ESCOLHER -->
+        <section class="why-choose-section">
+            <h2 class="why-choose-title">Por Que Escolher Este Material?</h2>
+            <p class="why-choose-subtitle">Chega de perder tempo improvisando. Tenha tudo organizado para conduzir encontros mais leves, criativos e participativos.</p>
+            <div class="why-grid">
+                <!-- CARD 1 -->
+                <div class="why-card">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <h3 class="why-card-title">+150 Dinâmicas Testadas e Aprovadas</h3>
+                    <p class="why-card-desc">Material já organizado e validado para facilitar seus encontros.</p>
+                </div>
+                <!-- CARD 2 -->
+                <div class="why-card">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    </div>
+                    <h3 class="why-card-title">Acesso Imediato e 100% Digital</h3>
+                    <p class="why-card-desc">Receba e comece a usar no mesmo instante após a compra.</p>
+                </div>
+                <!-- CARD 3 -->
+                <div class="why-card">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                    </div>
+                    <h3 class="why-card-title">Pronto Para Imprimir</h3>
+                    <p class="why-card-desc">Use direto no papel ou digital — como preferir.</p>
+                </div>
+                <!-- CARD 4 -->
+                <div class="why-card">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <h3 class="why-card-title">Economize Horas de Preparação</h3>
+                    <p class="why-card-desc">Pare de perder tempo procurando ideias e tenha tudo pronto.</p>
                 </div>
             </div>
         </section>
