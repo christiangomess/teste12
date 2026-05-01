@@ -219,6 +219,7 @@
             text-transform: uppercase;
             width: 85%;
             max-width: 360px;
+            will-change: transform;
         }
 
         .hero-cta:hover {
@@ -369,6 +370,7 @@
             box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             text-transform: uppercase;
+            will-change: transform;
         }
 
         @media (min-width: 768px) {
@@ -437,6 +439,7 @@
             pointer-events: none;
             opacity: 0;
             transition: opacity 0.3s ease;
+            will-change: opacity;
         }
 
         .cta-wrapper:hover::before {
@@ -496,8 +499,9 @@
             display: flex;
             flex-direction: column;
             border: 1px solid rgba(58, 123, 213, 0.1);
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
             cursor: pointer;
+            will-change: transform;
         }
 
         .receber-card:hover,
@@ -619,8 +623,9 @@
             align-items: center;
             text-align: center;
             border: 1px solid rgba(58, 123, 213, 0.1);
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
             cursor: pointer;
+            will-change: transform;
         }
 
         .why-card:hover,
@@ -1147,6 +1152,10 @@
             align-items: center;
             justify-content: center;
             min-height: 44px;
+            will-change: transform;
+            border: none;
+            font-family: inherit;
+            cursor: pointer;
         }
 
         .pricing-card.premium .card-btn {
@@ -1263,6 +1272,7 @@
             width: 85%;
             max-width: 360px;
             text-align: center;
+            will-change: transform;
         }
 
         .testimonial-cta:hover {
@@ -1346,8 +1356,9 @@
             cursor: pointer;
             z-index: 10;
             opacity: 0;
-            transition: all 0.3s ease;
+            transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            will-change: opacity, transform;
         }
 
         @media (min-width: 768px) {
@@ -1618,7 +1629,7 @@
             border: 1px solid #e5e5e5;
             border-radius: 8px;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
         }
 
         .faq-item:hover {
@@ -1657,6 +1668,7 @@
             stroke-linejoin: round;
             flex-shrink: 0;
             margin-left: 12px;
+            will-change: transform;
         }
 
         .faq-item.active .faq-question svg {
@@ -1681,12 +1693,23 @@
         }
     </style>
 
-    <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "wddp78e87q");
+    <script>
+        // Clarity - carregamento atrasado (5 segundos ou após interação)
+        function loadClarity() {
+            if (window.clarityLoaded) return;
+            window.clarityLoaded = true;
+            (function (c, l, a, r, i, t, y) {
+                c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+                t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+                y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+            })(window, document, "clarity", "script", "wddp78e87q");
+        }
+
+        // Carrega após 5 segundos ou após primeira interação
+        setTimeout(loadClarity, 5000);
+        ['scroll', 'click', 'touchstart', 'mousemove'].forEach(function (event) {
+            window.addEventListener(event, loadClarity, { once: true, passive: true });
+        });
     </script>
 </head>
 
@@ -1702,14 +1725,14 @@
     <section class="hero-section">
         <h1 class="hero-headline">
             <span class="highlight">+150 Dinâmicas Lúdicas</span><br> para uma Catequese Infantil<br> <span
-                class="highlight">3x Mais Envolvente</span>
+                class="highlight">5x Mais Divertidas E Sem Improvisação</span>
         </h1>
         <p class="hero-subheadline">
             Material completo, organizado e pronto para aplicar. Economize horas de preparo e torne seus encontros mais
             envolventes para as crianças.
         </p>
-        <img src="mockup3d.webp" alt="Mockup do Produto" class="hero-mockup" width="340" height="auto"
-            fetchpriority="high">
+        <img src="mockup3d.webp" srcset="mockup3d.webp 340w, mockup3d.webp 380w" sizes="(max-width: 768px) 340px, 380px"
+            alt="Mockup do Produto" class="hero-mockup" width="340" height="220" fetchpriority="high">
         <p class="hero-proof">🔥 +2.787 catequistas ficaram satisfeitas!</p>
         <a href="#precos" class="hero-cta">QUERO COMEÇAR AGORA</a>
         <div class="hero-benefits">
@@ -2028,8 +2051,8 @@
 
                     <div style="flex-grow: 1;"></div>
 
-                    <a href="" class="card-btn" id="btn-basic-plan">QUERO ACESSO
-                        BÁSICO</a>
+                    <button type="button" class="card-btn" id="btn-basic-plan">QUERO ACESSO
+                        BÁSICO</button>
                 </div>
 
             </div>
@@ -2058,22 +2081,6 @@
                             <img src="pv4.webp" alt="Prova Social 4" class="testimonial-img" width="340" height="200"
                                 loading="lazy" decoding="async">
                         </div>
-                        <div class="carousel-slide">
-                            <img src="pv5.webp" alt="Prova Social 5" class="testimonial-img" width="340" height="200"
-                                loading="lazy" decoding="async">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="pv6.webp" alt="Prova Social 6" class="testimonial-img" width="340" height="200"
-                                loading="lazy" decoding="async">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="pv7.webp" alt="Prova Social 7" class="testimonial-img" width="340" height="200"
-                                loading="lazy" decoding="async">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="pv8.webp" alt="Prova Social 8" class="testimonial-img" width="340" height="200"
-                                loading="lazy" decoding="async">
-                        </div>
                     </div>
                 </div>
 
@@ -2095,10 +2102,6 @@
                     <button class="dot" data-index="1" aria-label="Slide 2"></button>
                     <button class="dot" data-index="2" aria-label="Slide 3"></button>
                     <button class="dot" data-index="3" aria-label="Slide 4"></button>
-                    <button class="dot" data-index="4" aria-label="Slide 5"></button>
-                    <button class="dot" data-index="5" aria-label="Slide 6"></button>
-                    <button class="dot" data-index="6" aria-label="Slide 7"></button>
-                    <button class="dot" data-index="7" aria-label="Slide 8"></button>
                 </div>
             </div>
 
@@ -2278,8 +2281,10 @@
             z-index: 99999;
             opacity: 0;
             visibility: hidden;
-            transition: all 0.3s ease;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
             backdrop-filter: blur(6px);
+            will-change: opacity;
+            padding: 16px;
         }
 
         .modal-overlay.active {
@@ -2292,18 +2297,19 @@
             width: 90%;
             max-width: 480px;
             border-radius: 16px;
-            padding: 32px 24px;
+            padding: 20px 16px 12px;
             position: relative;
             transform: scale(0.95) translateY(20px);
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             max-height: 90vh;
-            overflow-y: auto;
+            overflow: visible;
             font-family: 'Poppins', sans-serif;
+            will-change: transform, opacity;
         }
 
         .modal-overlay.active .modal-content {
@@ -2312,11 +2318,11 @@
 
         .modal-close {
             position: absolute;
-            top: 16px;
-            right: 16px;
+            top: 12px;
+            right: 12px;
             background: none;
             border: none;
-            font-size: 28px;
+            font-size: 26px;
             color: #9CA3AF;
             cursor: pointer;
             transition: color 0.2s;
@@ -2332,26 +2338,26 @@
         .modal-badge {
             background: #EFF6FF;
             color: #3A7BD5;
-            padding: 6px 16px;
+            padding: 5px 14px;
             border-radius: 50px;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 800;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             text-transform: uppercase;
         }
 
         .modal-title {
             color: #111827;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 800;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             line-height: 1.2;
         }
 
         .modal-subtitle {
             color: #4B5563;
-            font-size: 15px;
-            margin-bottom: 24px;
+            font-size: 13px;
+            margin-bottom: 16px;
             line-height: 1.4;
         }
 
@@ -2359,24 +2365,24 @@
             background: #F4F8FF;
             border: 2px solid #3A7BD5;
             border-radius: 12px;
-            padding: 20px;
+            padding: 14px;
             width: 100%;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             text-align: center;
             box-shadow: 0 8px 25px rgba(58, 123, 213, 0.08);
         }
 
-        .modal-card-inner-title {
+        .modal-card_inner-title {
             color: #111827;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 800;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .modal-card-inner-desc {
             color: #4B5563;
-            font-size: 14px;
-            margin-bottom: 16px;
+            font-size: 12px;
+            margin-bottom: 12px;
             line-height: 1.4;
         }
 
@@ -2384,19 +2390,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .modal-price-old {
             color: #9CA3AF;
             text-decoration: line-through;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
         }
 
         .modal-price-new {
             color: #3A7BD5;
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 800;
         }
 
@@ -2404,8 +2410,8 @@
             background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);
             color: #ffffff;
             font-weight: 800;
-            font-size: 16px;
-            padding: 16px 24px;
+            font-size: 14px;
+            padding: 14px 20px;
             border: none;
             border-radius: 50px;
             cursor: pointer;
@@ -2413,12 +2419,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 56px;
+            min-height: 48px;
             width: 100%;
             box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             text-transform: uppercase;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
+            will-change: transform;
         }
 
         .modal-cta:hover {
@@ -2430,17 +2437,67 @@
         .modal-secondary-btn {
             background: none;
             border: none;
-            color: #6B7280;
-            font-size: 14px;
+            color: #000000;
+            font-size: 12px;
             cursor: pointer;
             text-decoration: underline;
             transition: color 0.2s;
             font-family: inherit;
+            padding: 8px;
         }
 
         .modal-secondary-btn:hover {
-            color: #374151;
+            color: #333333;
         }
+
+        @media (min-width: 480px) {
+            .modal-content {
+                padding: 28px 20px 16px;
+            }
+
+            .modal-badge {
+                font-size: 14px;
+                padding: 6px 16px;
+                margin-bottom: 16px;
+            }
+
+            .modal-title {
+                font-size: 22px;
+                margin-bottom: 12px;
+            }
+
+            .modal-subtitle {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+
+            .modal-card-inner {
+                padding: 18px;
+                margin-bottom: 20px;
+            }
+
+            .modal-card_inner-title {
+                font-size: 17px;
+            }
+
+            .modal-card-inner-desc {
+                font-size: 13px;
+            }
+
+            .modal-price-old {
+                font-size: 15px;
+            }
+
+            .modal-price-new {
+                font-size: 26px;
+            }
+
+            .modal-cta {
+                font-size: 15px;
+                padding: 16px 24px;
+                min-height: 52px;
+                margin-bottom: 16px;
+            }
     </style>
 
     <!-- UPSELL MODAL -->
@@ -2479,6 +2536,7 @@
 
             basicBtn.addEventListener('click', function (e) {
                 e.preventDefault();
+                e.stopPropagation();
                 modal.classList.add('active');
             });
 
@@ -2486,7 +2544,10 @@
                 modal.classList.remove('active');
             }
 
-            closeBtn.addEventListener('click', closeModal);
+            closeBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                closeModal();
+            });
 
             modal.addEventListener('click', function (e) {
                 if (e.target === modal) {
@@ -2494,9 +2555,10 @@
                 }
             });
 
-            continueBasic.addEventListener('click', function () {
+            continueBasic.addEventListener('click', function (e) {
+                e.preventDefault();
                 closeModal();
-                window.location.href = basicBtn.href;
+                window.location.href = "https://pay.wiapy.com/tG1kplN20K";
             });
         });
     </script>
@@ -2688,16 +2750,43 @@
     </script>
 
     <script>
-        window.pixelId = "69e2bcbd6ae1a8d31e69f902";
-        var a = document.createElement("script");
-        a.setAttribute("async", "");
-        a.setAttribute("defer", "");
-        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-        document.head.appendChild(a);
+        // Utmify/Facebook Pixel - carregamento atrasado (3 segundos ou após interação)
+        function loadUtmify() {
+            if (window.utmifyLoaded) return;
+            window.utmifyLoaded = true;
+
+            window.pixelId = "69e2bcbd6ae1a8d31e69f902";
+            var a = document.createElement("script");
+            a.setAttribute("async", "");
+            a.setAttribute("defer", "");
+            a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+            document.head.appendChild(a);
+        }
+
+        // Carrega após 3 segundos ou após primeira interação
+        setTimeout(loadUtmify, 3000);
+        ['scroll', 'click', 'touchstart', 'mousemove'].forEach(function (event) {
+            window.addEventListener(event, loadUtmify, { once: true, passive: true });
+        });
     </script>
 
-    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck
-        data-utmify-prevent-subids async defer></script>
+    <script defer>
+        // Utmify tracker - carregamento atrasado
+        function loadUtmifyTracker() {
+            if (window.utmifyTrackerLoaded) return;
+            window.utmifyTrackerLoaded = true;
+            var s = document.createElement("script");
+            s.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
+            s.setAttribute("data-utmify-prevent-xcod-sck", "");
+            s.setAttribute("data-utmify-prevent-subids", "");
+            s.setAttribute("async", "async");
+            document.head.appendChild(s);
+        }
+        setTimeout(loadUtmifyTracker, 4000);
+        ['scroll', 'click', 'touchstart', 'mousemove'].forEach(function (event) {
+            window.addEventListener(event, loadUtmifyTracker, { once: true, passive: true });
+        });
+    </script>
 
 </body>
 
