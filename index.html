@@ -526,10 +526,23 @@
             .what-carousel-viewport {
                 border-radius: 18px !important;
                 overflow: hidden !important;
+                isolation: isolate !important;
+                transform: translateZ(0) !important;
+                -webkit-mask-image: -webkit-radial-gradient(white, black) !important;
+            }
+
+            .what-carousel-track {
+                border-radius: 18px !important;
+                transform: translateZ(0) !important;
             }
 
             .what-carousel-slide {
                 padding: 0 8px !important;
+                border-radius: 18px !important;
+                overflow: hidden !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
             }
 
             .what-carousel-img {
@@ -538,23 +551,22 @@
                 max-height: 58vh !important;
                 object-fit: contain !important;
                 border-radius: 18px !important;
-                overflow: hidden !important;
                 display: block !important;
+                overflow: hidden !important;
                 clip-path: inset(0 round 18px) !important;
                 -webkit-clip-path: inset(0 round 18px) !important;
-            }
-
-            .what-carousel-track {
-                border-radius: 18px !important;
+                transform: translateZ(0) !important;
             }
 
             .what-carousel-slide.active,
-            .what-carousel-slide.current {
+            .what-carousel-slide.current,
+            .what-carousel-slide.dragging {
                 border-radius: 18px !important;
             }
 
             .what-carousel-slide.active img,
-            .what-carousel-slide.current img {
+            .what-carousel-slide.current img,
+            .what-carousel-slide.dragging img {
                 border-radius: 18px !important;
             }
 
