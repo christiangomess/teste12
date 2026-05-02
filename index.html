@@ -90,7 +90,7 @@
             font-weight: 700;
             font-size: 13px;
             z-index: 1000;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 16px rgba(53, 29, 27, 0.3);
             padding: 10px 16px;
             display: flex;
             align-items: center;
@@ -108,6 +108,7 @@
         .promo-bar .promo-date {
             white-space: nowrap;
             font-weight: 800;
+            color: #ffffff;
         }
 
         @media (min-width: 768px) {
@@ -120,13 +121,13 @@
 
         /* HERO SECTION */
         .hero-section {
-            background-color: #ffffff;
+            background-color: #351d1b;
             padding: 32px 20px 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            box-shadow: 0 2px 8px rgba(53, 29, 27, 0.08);
+            box-shadow: 0 4px 20px rgba(53, 29, 27, 0.25);
         }
 
         .hero-headline {
@@ -134,11 +135,11 @@
             font-size: 24px;
             line-height: 1.25;
             margin-bottom: 14px;
-            color: #351d1b;
+            color: #ffffff;
         }
 
         .hero-headline .highlight {
-            background: linear-gradient(90deg, #ecc278, #d4a84a);
+            background: linear-gradient(90deg, #ecc278, #f0d68a);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -157,7 +158,7 @@
 
         .hero-subheadline {
             font-size: 15px;
-            color: #5a403a;
+            color: #ecc278;
             line-height: 1.4;
             margin-bottom: 20px;
             max-width: 520px;
@@ -177,7 +178,8 @@
             aspect-ratio: 340 / 220;
             margin-bottom: 16px;
             border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+            border: 3px solid #ecc278;
         }
 
         @media (min-width: 768px) {
@@ -189,7 +191,7 @@
 
         .hero-proof {
             font-size: 13px;
-            color: #5a403a;
+            color: #ecc278;
             margin-bottom: 16px;
             font-weight: 600;
         }
@@ -215,18 +217,20 @@
             justify-content: center;
             align-items: center;
             min-height: 56px;
-            box-shadow: 0 6px 20px rgba(22, 163, 74, 0.35);
+            box-shadow: 0 6px 20px rgba(22, 163, 74, 0.45);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             text-transform: uppercase;
             width: 85%;
             max-width: 360px;
             will-change: transform;
+            border: 2px solid transparent;
         }
 
         .hero-cta:hover {
             transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 10px 28px rgba(22, 163, 74, 0.45);
+            box-shadow: 0 10px 32px rgba(22, 163, 74, 0.55);
             background: linear-gradient(180deg, #15803d 0%, #14532d 100%);
+            border-color: #ecc278;
         }
 
         .hero-cta:active {
@@ -247,7 +251,7 @@
             align-items: center;
             gap: 6px;
             font-size: 12px;
-            color: #5a403a;
+            color: #ecc278;
             font-weight: 500;
         }
 
@@ -281,7 +285,7 @@
             justify-content: center;
         }
 
-        /* 2. SEÇÃO DE GARANTIA INCONDICIONAL */
+/* 2. SEÇÃO DE GARANTIA INCONDICIONAL */
         .guarantee-section {
             background-color: #F2E4DD;
             padding: 40px 20px;
@@ -293,7 +297,23 @@
             max-width: 900px;
             margin: 0 auto;
             width: 100%;
-            box-shadow: 0 2px 8px rgba(53, 29, 27, 0.08);
+            box-shadow: 0 4px 20px rgba(53, 29, 27, 0.15);
+        }
+
+        @media (min-width: 768px) {
+            .guarantee-section {
+                padding: 48px 20px;
+            }
+        }
+
+        .guarantee-icon {
+            width: 120px;
+            height: auto;
+            margin-bottom: 16px;
+            border-radius: 10px;
+            /* Caso a imagem JPEG seja quadrada e precise de bordas suaves */
+            mix-blend-mode: multiply;
+            /* Para misturar o fundo branco do JPEG com o #F2E4DD do fundo */
         }
 
         @media (min-width: 768px) {
@@ -456,7 +476,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0 2px 8px rgba(53, 29, 27, 0.08);
+            box-shadow: 0 4px 20px rgba(53, 29, 27, 0.12);
         }
 
         .new-what-you-get-title {
@@ -564,7 +584,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0 2px 8px rgba(53, 29, 27, 0.08);
+            box-shadow: 0 4px 20px rgba(53, 29, 27, 0.15);
         }
 
         @media (min-width: 768px) {
@@ -696,16 +716,16 @@
 
         /* SEÇÃO: BÔNUS EXCLUSIVOS */
         .bonus-section {
-            background-color: #F5EBDD;
+            background-color: #351d1b;
             padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0 2px 8px rgba(53, 29, 27, 0.08);
+            box-shadow: 0 4px 20px rgba(53, 29, 27, 0.25);
         }
 
         .bonus-section-title {
-            color: #351d1b;
+            color: #ecc278;
             font-weight: 800;
             font-size: 24px;
             text-align: center;
@@ -818,7 +838,7 @@
         }
 
         .bonus-card {
-            background: #ffffff;
+            background: #F5EBDD;
             border: 2px solid #ecc278;
             border-radius: 14px;
             padding: 14px;
@@ -826,9 +846,15 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(53, 29, 27, 0.08);
+            box-shadow: 0 8px 24px rgba(53, 29, 27, 0.2);
             user-select: none;
             -webkit-user-select: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bonus-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(236, 194, 120, 0.3);
         }
 
         .bonus-img {
@@ -838,7 +864,7 @@
             border-radius: 8px;
             object-fit: contain;
             margin-bottom: 8px;
-            background-color: #F2E4DD;
+            background-color: #ffffff;
         }
 
         .bonus-card-title {
@@ -881,7 +907,7 @@
             font-size: 16px;
             text-align: center;
             margin-top: 24px;
-            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.08);
+            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.15);
         }
 
         .bonus-total-block .strike {
@@ -892,7 +918,7 @@
 
         .bonus-total-block strong {
             font-weight: 800;
-            color: #16a34a;
+            color: #ecc278;
             text-transform: uppercase;
         }
 
@@ -910,12 +936,12 @@
 
         /* SEÇÃO: ESCOLHA SEU ACESSO */
         .pricing-section {
-            background-color: #ffffff;
+            background-color: #F5EBDD;
             padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0 2px 8px rgba(53, 29, 27, 0.08);
+            box-shadow: 0 4px 20px rgba(53, 29, 27, 0.15);
         }
 
         .pricing-section-title {
@@ -978,7 +1004,7 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 4px 15px rgba(53, 29, 27, 0.08);
+            box-shadow: 0 8px 24px rgba(53, 29, 27, 0.15);
         }
 
         @media (min-width: 768px) {
@@ -988,17 +1014,17 @@
         }
 
         .pricing-card.premium {
-            border: 2px solid #ecc278;
-            box-shadow: 0 8px 25px rgba(22, 163, 74, 0.15);
+            border: 3px solid #ecc278;
+            box-shadow: 0 12px 32px rgba(22, 163, 74, 0.25);
         }
 
         .pricing-card.basic {
-            border: 1px solid rgba(53, 29, 27, 0.12);
+            border: 1px solid rgba(53, 29, 27, 0.15);
         }
 
         .tag-best-seller {
             position: absolute;
-            top: -12px;
+            top: -14px;
             left: 50%;
             transform: translateX(-50%);
             background: #ecc278;
@@ -1010,6 +1036,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(236, 194, 120, 0.4);
         }
 
         .pricing-card-title {
@@ -1243,6 +1270,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            box-shadow: 0 4px 20px rgba(53, 29, 27, 0.3);
         }
 
         .testimonials-title {
@@ -1270,7 +1298,7 @@
             border-radius: 50px;
             text-transform: uppercase;
             text-decoration: none;
-            box-shadow: 0 6px 20px rgba(22, 163, 74, 0.4);
+            box-shadow: 0 6px 20px rgba(22, 163, 74, 0.5);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             display: inline-flex;
             justify-content: center;
@@ -1280,11 +1308,13 @@
             max-width: 360px;
             text-align: center;
             will-change: transform;
+            border: 2px solid transparent;
         }
 
         .testimonial-cta:hover {
             transform: scale(1.02) translateY(-2px);
-            box-shadow: 0 8px 25px rgba(22, 163, 74, 0.5);
+            box-shadow: 0 10px 32px rgba(22, 163, 74, 0.6);
+            border-color: #ecc278;
         }
 
         .testimonial-cta:active {
@@ -1446,7 +1476,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 8px rgba(53, 29, 27, 0.08);
+            box-shadow: 0 4px 20px rgba(53, 29, 27, 0.15);
         }
 
         .author-section-title {
@@ -1493,7 +1523,7 @@
             border-radius: 50%;
             border: 4px solid #ecc278;
             object-fit: cover;
-            box-shadow: 0 10px 25px rgba(53, 29, 27, 0.15);
+            box-shadow: 0 12px 32px rgba(53, 29, 27, 0.25);
         }
 
         @media (min-width: 768px) {
@@ -1602,7 +1632,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0 2px 8px rgba(53, 29, 27, 0.08);
+            box-shadow: 0 4px 20px rgba(53, 29, 27, 0.15);
         }
 
         .faq-title {
