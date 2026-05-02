@@ -58,6 +58,26 @@
             padding-top: 44px;
         }
 
+        min-height: 100vh;
+        padding-top: 44px;
+        }
+
+        html.utm-blocked body {
+            background-color: #351d1b !important;
+        }
+
+        /* Gap fix - paint with same color */
+        .promo-bar,
+        .promo-bar::after {
+            background-color: #351d1b !important;
+            border-bottom-color: #351d1b !important;
+        }
+
+        .hero-section,
+        .hero-section::before {
+            background-color: #351d1b !important;
+        }
+
         html.utm-blocked body>*:not(.hero-section),
         html.utm-blocked .promo-bar,
         html.utm-blocked main,
@@ -71,6 +91,17 @@
             max-width: 100% !important;
             margin: 0 !important;
             padding: 32px 20px 40px !important;
+            background-color: #351d1b !important;
+        }
+
+        /* Fix gap between top bar and hero */
+        .promo-bar {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+
+        .hero-section {
+            padding-top: 32px;
         }
 
         @media (min-width: 768px) {
@@ -85,13 +116,13 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #351d1b;
-            color: #ecc278;
+            background-color: #351d1b !important;
+            color: #ecc278 !important;
             font-weight: 700;
             font-size: 13px;
             z-index: 1000;
             box-shadow: 0 4px 16px rgba(53, 29, 27, 0.3);
-            padding: 10px 16px;
+            padding: 10px 16px 20px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -103,12 +134,13 @@
 
         .promo-bar .promo-text {
             white-space: nowrap;
+            color: #ecc278 !important;
         }
 
         .promo-bar .promo-date {
             white-space: nowrap;
+            color: #FFFFFF !important;
             font-weight: 800;
-            color: #ffffff;
         }
 
         @media (min-width: 768px) {
@@ -128,6 +160,7 @@
             align-items: center;
             text-align: center;
             box-shadow: 0 4px 20px rgba(53, 29, 27, 0.25);
+            margin-top: 0 !important;
         }
 
         .hero-headline {
@@ -158,7 +191,7 @@
 
         .hero-subheadline {
             font-size: 15px;
-            color: #ecc278;
+            color: #ffffff !important;
             line-height: 1.4;
             margin-bottom: 20px;
             max-width: 520px;
@@ -191,7 +224,7 @@
 
         .hero-proof {
             font-size: 13px;
-            color: #ecc278;
+            color: #ffffff !important;
             margin-bottom: 16px;
             font-weight: 600;
         }
@@ -217,8 +250,8 @@
             justify-content: center;
             align-items: center;
             min-height: 56px;
-            box-shadow: 0 6px 20px rgba(22, 163, 74, 0.45);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: none !important;
+            transition: transform 0.2s ease;
             text-transform: uppercase;
             width: 85%;
             max-width: 360px;
@@ -228,14 +261,14 @@
 
         .hero-cta:hover {
             transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 10px 32px rgba(22, 163, 74, 0.55);
+            box-shadow: none !important;
             background: linear-gradient(180deg, #15803d 0%, #14532d 100%);
-            border-color: #ecc278;
+            border-color: transparent;
         }
 
         .hero-cta:active {
             transform: scale(0.96);
-            box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+            box-shadow: none !important;
         }
 
         .hero-benefits {
@@ -261,6 +294,7 @@
             stroke: #ecc278;
             stroke-width: 2.5;
             fill: none;
+            transition: stroke 0.2s ease;
         }
 
         @media (min-width: 768px) {
@@ -285,19 +319,17 @@
             justify-content: center;
         }
 
-/* 2. SEÇÃO DE GARANTIA INCONDICIONAL */
+        /* 2. SEÇÃO DE GARANTIA INCONDICIONAL */
         .guarantee-section {
-            background-color: #F2E4DD;
+            background-color: #F5EBDD;
+            width: 100%;
             padding: 40px 20px;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            max-width: 900px;
-            margin: 0 auto;
-            width: 100%;
-            box-shadow: 0 4px 20px rgba(53, 29, 27, 0.15);
+            box-shadow: none;
         }
 
         @media (min-width: 768px) {
@@ -311,25 +343,6 @@
             height: auto;
             margin-bottom: 16px;
             border-radius: 10px;
-            /* Caso a imagem JPEG seja quadrada e precise de bordas suaves */
-            mix-blend-mode: multiply;
-            /* Para misturar o fundo branco do JPEG com o #F2E4DD do fundo */
-        }
-
-        @media (min-width: 768px) {
-            .guarantee-section {
-                padding: 48px 20px;
-            }
-        }
-
-        .guarantee-icon {
-            width: 120px;
-            height: auto;
-            margin-bottom: 16px;
-            border-radius: 10px;
-            /* Caso a imagem JPEG seja quadrada e precise de bordas suaves */
-            mix-blend-mode: multiply;
-            /* Para misturar o fundo branco do JPEG com o #F2E4DD do fundo */
         }
 
         @media (min-width: 768px) {
@@ -390,7 +403,7 @@
             justify-content: center;
             align-items: center;
             min-height: 56px;
-            box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4);
+            box-shadow: none !important;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             text-transform: uppercase;
             will-change: transform;
@@ -405,13 +418,13 @@
 
         .cta-button:hover {
             transform: scale(1.02) translateY(-2px);
-            box-shadow: 0 12px 30px rgba(22, 163, 74, 0.6);
+            box-shadow: none !important;
             background: linear-gradient(180deg, #15803d 0%, #14532d 100%);
         }
 
         .cta-button:active {
             transform: scale(0.96);
-            box-shadow: 0 4px 15px rgba(22, 163, 74, 0.4);
+            box-shadow: none !important;
         }
 
         /* 5. RODAPÉ (FOOTER) */
@@ -469,7 +482,7 @@
             opacity: 1;
         }
 
-        /* NOVA SEÇÃO: O QUE VOCÊ VAI RECEBER */
+        /* NOVA SEÇÃO: O QUE VOCÊ VAI RECEBER - CARROSSEL */
         .new-what-you-get-section {
             background-color: #F5EBDD;
             padding: 40px 20px;
@@ -498,6 +511,154 @@
                 font-size: 32px;
                 margin-bottom: 48px;
             }
+        }
+
+        /* Carrossel da seção O QUE VOCÊ VAI RECEBER */
+        .what-carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 460px;
+            margin: 0 auto;
+        }
+
+        .what-carousel-viewport {
+            overflow: hidden;
+            width: 100%;
+            box-shadow: none !important;
+            background: transparent !important;
+        }
+
+        .what-carousel-track {
+            display: flex;
+            transition: transform 0.4s ease-out;
+            will-change: transform;
+            cursor: grab;
+            touch-action: pan-y;
+            box-shadow: none !important;
+            background: transparent !important;
+        }
+
+        .what-carousel-track:active {
+            cursor: grabbing;
+        }
+
+        .what-carousel-slide {
+            flex: 0 0 100%;
+            min-width: 100%;
+            padding: 0 10px;
+            display: flex;
+            justify-content: center;
+            box-shadow: none !important;
+            background: transparent !important;
+        }
+
+        .what-carousel-img {
+            width: 100%;
+            max-width: 420px;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+            border-radius: 18px;
+            box-shadow: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .what-carousel-container {
+                max-width: 92vw;
+            }
+
+            .what-carousel-img {
+                max-width: 92vw;
+            }
+        }
+
+        .what-carousel-arrow {
+            position: absolute;
+            top: calc(50% - 24px);
+            background: #ffffff;
+            border: 2px solid #351d1b;
+            color: #351d1b;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0 4px 10px rgba(53, 29, 27, 0.2);
+            will-change: opacity, transform;
+        }
+
+        @media (min-width: 768px) {
+            .what-carousel-arrow {
+                width: 44px;
+                height: 44px;
+                opacity: 0.8;
+            }
+
+            .what-carousel-container:hover .what-carousel-arrow {
+                opacity: 0.95;
+            }
+        }
+
+        .what-carousel-arrow:hover {
+            opacity: 1 !important;
+            background: #351d1b;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(53, 29, 27, 0.3);
+        }
+
+        .what-carousel-arrow svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .what-carousel-arrow.prev {
+            left: -10px;
+        }
+
+        .what-carousel-arrow.next {
+            right: -10px;
+        }
+
+        @media (min-width: 768px) {
+            .what-carousel-arrow.prev {
+                left: -36px;
+            }
+
+            .what-carousel-arrow.next {
+                right: -36px;
+            }
+        }
+
+        .what-carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .what-carousel-dots .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(53, 29, 27, 0.25);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+
+        .what-carousel-dots .dot.active {
+            background-color: #351d1b;
+            transform: scale(1.3);
         }
 
         .receber-grid {
@@ -567,7 +728,7 @@
 
         .receber-card:hover .receber-card-title,
         .receber-card:active .receber-card-title {
-            color: #ecc278 !important;
+            color: #351d1b !important;
         }
 
         .receber-card-desc {
@@ -648,37 +809,50 @@
             align-items: center;
             text-align: center;
             border: 1px solid rgba(53, 29, 27, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             will-change: transform;
         }
 
         .why-card:hover,
         .why-card:active {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(236, 194, 120, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 18px 35px rgba(53, 29, 27, 0.18);
         }
 
         .icon-circle {
             width: 64px;
             height: 64px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #ecc278, #d4a84a);
+            background: #351d1b !important;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
-            box-shadow: 0 6px 15px rgba(236, 194, 120, 0.3);
+            box-shadow: 0 6px 15px rgba(53, 29, 27, 0.25);
+            transition: background 0.3s ease, box-shadow 0.3s ease;
         }
 
         .icon-circle svg {
             width: 32px;
             height: 32px;
             fill: none;
-            stroke: #ffffff;
+            stroke: #ecc278 !important;
             stroke-width: 2;
             stroke-linecap: round;
             stroke-linejoin: round;
+            transition: stroke 0.3s ease;
+        }
+
+        .why-card:hover .icon-circle,
+        .why-card:active .icon-circle {
+            background: #ecc278 !important;
+            box-shadow: 0 8px 20px rgba(236, 194, 120, 0.4);
+        }
+
+        .why-card:hover .icon-circle svg,
+        .why-card:active .icon-circle svg {
+            stroke: #351d1b !important;
         }
 
         .why-card-title {
@@ -696,7 +870,7 @@
         }
 
         .why-card-desc {
-            color: #5a403a;
+            color: #351d1b;
             font-size: 14px;
             line-height: 1.5;
         }
@@ -907,7 +1081,7 @@
             font-size: 16px;
             text-align: center;
             margin-top: 24px;
-            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.15);
+            box-shadow: none !important;
         }
 
         .bonus-total-block .strike {
@@ -918,7 +1092,7 @@
 
         .bonus-total-block strong {
             font-weight: 800;
-            color: #ecc278;
+            color: #16a34a;
             text-transform: uppercase;
         }
 
@@ -1015,7 +1189,7 @@
 
         .pricing-card.premium {
             border: 3px solid #ecc278;
-            box-shadow: 0 12px 32px rgba(22, 163, 74, 0.25);
+            box-shadow: none !important;
         }
 
         .pricing-card.basic {
@@ -1129,11 +1303,11 @@
         }
 
         .pricing-card.premium .pricing-features li svg {
-            color: #ecc278;
+            color: #351d1b;
         }
 
         .pricing-card.basic .pricing-features li svg {
-            color: #9e7575;
+            color: #666666;
         }
 
         .premium-bonus-box {
@@ -1195,32 +1369,35 @@
         .pricing-card.premium .card-btn {
             background: linear-gradient(180deg, #16a34a 0%, #15803d 100%);
             color: #ffffff;
-            box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+            box-shadow: none !important;
         }
 
         .pricing-card.premium .card-btn:hover {
             transform: scale(1.02) translateY(-2px);
-            box-shadow: 0 6px 20px rgba(22, 163, 74, 0.4);
+            box-shadow: none !important;
         }
 
         .pricing-card.premium .card-btn:active {
             transform: scale(0.96);
-            box-shadow: 0 2px 10px rgba(22, 163, 74, 0.2);
+            box-shadow: none !important;
         }
 
         .pricing-card.basic .card-btn {
-            background: #ecc278;
-            color: #351d1b;
+            background: #D9D9D9 !important;
+            color: #333333 !important;
+            box-shadow: none !important;
         }
 
         .pricing-card.basic .card-btn:hover {
-            background: #d4a84a;
-            transform: scale(1.02) translateY(-2px);
+            background: #CFCFCF !important;
+            transform: none !important;
+            box-shadow: none !important;
         }
 
         .pricing-card.basic .card-btn:active {
-            transform: scale(0.96);
-            background: #c49a42;
+            transform: none !important;
+            background: #BFBFBF !important;
+            box-shadow: none !important;
         }
 
         .security-icons {
@@ -1298,8 +1475,8 @@
             border-radius: 50px;
             text-transform: uppercase;
             text-decoration: none;
-            box-shadow: 0 6px 20px rgba(22, 163, 74, 0.5);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: none !important;
+            transition: transform 0.2s ease;
             display: inline-flex;
             justify-content: center;
             align-items: center;
@@ -1313,13 +1490,13 @@
 
         .testimonial-cta:hover {
             transform: scale(1.02) translateY(-2px);
-            box-shadow: 0 10px 32px rgba(22, 163, 74, 0.6);
-            border-color: #ecc278;
+            box-shadow: none !important;
+            border-color: transparent;
         }
 
         .testimonial-cta:active {
             transform: scale(0.96);
-            box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+            box-shadow: none !important;
         }
 
         @media (min-width: 768px) {
@@ -1414,7 +1591,7 @@
             opacity: 1 !important;
             background: #ecc278;
             color: #ffffff;
-            box-shadow: 0 4px 15px rgba(22, 163, 74, 0.4);
+            box-shadow: none !important;
         }
 
         .carousel-arrow svg {
@@ -1521,7 +1698,7 @@
             width: 160px;
             height: 160px;
             border-radius: 50%;
-            border: 4px solid #ecc278;
+            border: 4px solid #351d1b;
             object-fit: cover;
             box-shadow: 0 12px 32px rgba(53, 29, 27, 0.25);
         }
@@ -1545,7 +1722,7 @@
         }
 
         .author-tag {
-            color: #ecc278;
+            color: #351d1b;
             font-weight: 600;
             /* Medium */
             font-size: 13px;
@@ -1596,7 +1773,7 @@
         }
 
         .metric-number {
-            color: #ecc278;
+            color: #351d1b;
             font-weight: 800;
             /* ExtraBold */
             font-size: 24px;
@@ -1605,8 +1782,7 @@
         }
 
         .metric-label {
-            color: #9e7575;
-            /* Cinza */
+            color: #351d1b;
             font-size: 13px;
             font-weight: 400;
         }
@@ -1668,12 +1844,13 @@
             border: 1px solid rgba(53, 29, 27, 0.12);
             border-radius: 8px;
             overflow: hidden;
-            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+            transition: none !important;
         }
 
         .faq-item:hover {
-            box-shadow: 0 4px 12px rgba(53, 29, 27, 0.08);
-            border-color: rgba(53, 29, 27, 0.2);
+            background-color: #ffffff !important;
+            border-color: rgba(53, 29, 27, 0.12) !important;
+            box-shadow: none !important;
         }
 
         .faq-question {
@@ -1688,12 +1865,13 @@
             align-items: center;
             font-size: 15px;
             font-weight: 700;
-            color: #351d1b;
-            transition: color 0.2s ease;
+            color: #351d1b !important;
+            transition: none !important;
         }
 
         .faq-question:hover {
-            color: #ecc278;
+            color: #351d1b !important;
+            background: transparent !important;
         }
 
         .faq-question svg {
@@ -1701,7 +1879,7 @@
             height: 18px;
             transition: transform 0.3s ease;
             fill: none;
-            stroke: currentColor;
+            stroke: #351d1b;
             stroke-width: 2;
             stroke-linecap: round;
             stroke-linejoin: round;
@@ -1712,7 +1890,7 @@
 
         .faq-item.active .faq-question svg {
             transform: rotate(180deg);
-            color: #ecc278;
+            stroke: #351d1b;
         }
 
         .faq-answer {
@@ -1799,55 +1977,54 @@
     </section>
 
     <main>
-        <!-- SEÇÃO: O QUE VOCÊ VAI RECEBER -->
+        <!-- SEÇÃO: O QUE VOCÊ VAI RECEBER - CARROSSEL -->
         <section class="new-what-you-get-section">
             <h2 class="new-what-you-get-title">O QUE VOCÊ VAI RECEBER</h2>
-            <div class="receber-grid">
-                <!-- CARD 1 -->
-                <div class="receber-card">
-                    <div class="receber-img-wrapper">
-                        <img src="receber1.webp" alt="Dinâmicas de Acolhimento" class="receber-img" loading="lazy">
-                    </div>
-                    <div class="receber-content">
-                        <h3 class="receber-card-title">DINÂMICAS DE ACOLHIMENTO</h3>
-                        <p class="receber-card-desc">Quebre o gelo em segundos e faça cada criança se sentir especial
-                            logo ao chegar.</p>
-                    </div>
-                </div>
-                <!-- CARD 2 -->
-                <div class="receber-card">
-                    <div class="receber-img-wrapper">
-                        <img src="receber2.webp" alt="Dinâmicas sobre a Bíblia" class="receber-img" loading="lazy">
-                    </div>
-                    <div class="receber-content">
-                        <h3 class="receber-card-title">DINÂMICAS SOBRE A BÍBLIA</h3>
-                        <p class="receber-card-desc">Transforme as histórias bíblicas em aventuras que as crianças vão
-                            querer ouvir de novo e de novo.</p>
-                    </div>
-                </div>
-                <!-- CARD 3 -->
-                <div class="receber-card">
-                    <div class="receber-img-wrapper">
-                        <img src="receber3.webp" alt="Dinâmicas sobre os Sacramentos" class="receber-img"
-                            loading="lazy">
-                    </div>
-                    <div class="receber-content">
-                        <h3 class="receber-card-title">DINÂMICAS SOBRE OS SACRAMENTOS</h3>
-                        <p class="receber-card-desc">Ensine Batismo, Eucaristia e Crisma de um jeito tão lúdico que as
-                            crianças vão entender e nunca esquecer.</p>
+
+            <div class="what-carousel-container" id="what-carousel">
+                <div class="what-carousel-viewport">
+                    <div class="what-carousel-track" id="what-carousel-track">
+                        <div class="what-carousel-slide">
+                            <img src="carrossel1.webp" alt="Dinâmicas de Acolhimento" class="what-carousel-img"
+                                loading="lazy">
+                        </div>
+                        <div class="what-carousel-slide">
+                            <img src="carrossel2.webp" alt="Dinâmicas sobre a Bíblia" class="what-carousel-img"
+                                loading="lazy">
+                        </div>
+                        <div class="what-carousel-slide">
+                            <img src="carrossel3.webp" alt="Dinâmicas sobre os Sacramentos" class="what-carousel-img"
+                                loading="lazy">
+                        </div>
+                        <div class="what-carousel-slide">
+                            <img src="carrossel4.webp" alt="Dinâmicas de Encerramento" class="what-carousel-img"
+                                loading="lazy">
+                        </div>
+                        <div class="what-carousel-slide">
+                            <img src="carrossel5.webp" alt="E Muito Mais" class="what-carousel-img" loading="lazy">
+                        </div>
                     </div>
                 </div>
-                <!-- CARD 4 -->
-                <div class="receber-card">
-                    <div class="receber-img-wrapper">
-                        <img src="receber4.webp" alt="Dinâmicas de Encerramento" class="receber-img" loading="lazy">
-                    </div>
-                    <div class="receber-content">
-                        <h3 class="receber-card-title">DINÂMICAS DE ENCERRAMENTO</h3>
-                        <p class="receber-card-desc">Feche cada encontro com uma experiência tão bonita que as crianças
-                            vão pra casa querendo voltar na semana seguinte.
-                        </p>
-                    </div>
+
+                <!-- Setas -->
+                <button class="what-carousel-arrow prev" id="what-prev-btn" aria-label="Anterior">
+                    <svg viewBox="0 0 24 24">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="what-carousel-arrow next" id="what-next-btn" aria-label="Próximo">
+                    <svg viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+
+                <!-- Dots -->
+                <div class="what-carousel-dots" id="what-carousel-dots">
+                    <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+                    <button class="dot" data-index="1" aria-label="Slide 2"></button>
+                    <button class="dot" data-index="2" aria-label="Slide 3"></button>
+                    <button class="dot" data-index="3" aria-label="Slide 4"></button>
+                    <button class="dot" data-index="4" aria-label="Slide 5"></button>
                 </div>
             </div>
         </section>
@@ -1961,7 +2138,7 @@
 
             <a href="https://pay.wiapy.com/2Ax2K8uZpJ" class="bonus-total-block"
                 style="text-decoration: none; cursor: pointer;">
-                💙 Total dos bônus: <span class="strike">R$141</span> → <strong>GRÁTIS HOJE!</strong>
+                🤎 Total dos bônus: <span class="strike">R$141</span> → <strong>GRÁTIS HOJE!</strong>
             </a>
         </section>
 
@@ -2333,7 +2510,7 @@
         }
 
         .modal-content {
-            background: #ffffff;
+            background: #351d1b !important;
             width: 90%;
             max-width: 480px;
             border-radius: 16px;
@@ -2341,7 +2518,7 @@
             position: relative;
             transform: scale(0.95) translateY(20px);
             transition: transform 0.3s ease, opacity 0.3s ease;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5) !important;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -2350,6 +2527,7 @@
             overflow: visible;
             font-family: 'Poppins', sans-serif;
             will-change: transform, opacity;
+            border: none !important;
         }
 
         .modal-overlay.active .modal-content {
@@ -2363,7 +2541,7 @@
             background: none;
             border: none;
             font-size: 26px;
-            color: #9CA3AF;
+            color: #D1D5DB !important;
             cursor: pointer;
             transition: color 0.2s;
             line-height: 1;
@@ -2372,7 +2550,7 @@
         }
 
         .modal-close:hover {
-            color: #333;
+            color: #ffffff !important;
         }
 
         .modal-badge {
@@ -2387,7 +2565,7 @@
         }
 
         .modal-title {
-            color: #351d1b;
+            color: #ffffff !important;
             font-size: 20px;
             font-weight: 800;
             margin-bottom: 8px;
@@ -2395,32 +2573,32 @@
         }
 
         .modal-subtitle {
-            color: #5a403a;
+            color: #ffffff !important;
             font-size: 13px;
             margin-bottom: 16px;
             line-height: 1.4;
         }
 
         .modal-card-inner {
-            background: #F2E4DD;
-            border: 2px solid #ecc278;
+            background: #ecc278 !important;
+            border: 2px solid #d4a84a !important;
             border-radius: 12px;
             padding: 14px;
             width: 100%;
             margin-bottom: 16px;
             text-align: center;
-            box-shadow: 0 8px 25px rgba(236, 194, 120, 0.15);
+            box-shadow: 0 8px 25px rgba(236, 194, 120, 0.3) !important;
         }
 
         .modal-card_inner-title {
-            color: #351d1b;
+            color: #351d1b !important;
             font-size: 16px;
             font-weight: 800;
             margin-bottom: 6px;
         }
 
         .modal-card-inner-desc {
-            color: #5a403a;
+            color: #351d1b !important;
             font-size: 12px;
             margin-bottom: 12px;
             line-height: 1.4;
@@ -2434,14 +2612,14 @@
         }
 
         .modal-price-old {
-            color: #9e7575;
-            text-decoration: line-through;
+            color: #DC2626 !important;
+            text-decoration: line-through !important;
             font-size: 14px;
             font-weight: 600;
         }
 
         .modal-price-new {
-            color: #16a34a;
+            color: #16a34a !important;
             font-size: 24px;
             font-weight: 800;
         }
@@ -2461,7 +2639,7 @@
             align-items: center;
             min-height: 48px;
             width: 100%;
-            box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4);
+            box-shadow: none !important;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             text-transform: uppercase;
             margin-bottom: 12px;
@@ -2470,20 +2648,24 @@
 
         .modal-cta:hover {
             transform: scale(1.02) translateY(-2px);
-            box-shadow: 0 12px 30px rgba(22, 163, 74, 0.6);
+            box-shadow: none !important;
             background: linear-gradient(180deg, #15803d 0%, #14532d 100%);
         }
 
         .modal-secondary-btn {
-            background: none;
+            background: transparent !important;
             border: none;
-            color: #5a403a;
+            color: #9CA3AF !important;
             font-size: 12px;
             cursor: pointer;
             text-decoration: underline;
             transition: color 0.2s;
             font-family: inherit;
             padding: 8px;
+        }
+
+        .modal-secondary-btn:hover {
+            color: #D1D5DB !important;
         }
 
         .modal-secondary-btn:hover {
@@ -2781,11 +2963,148 @@
             });
         }
 
+        // Carrossel da seção O QUE VOCÊ VAI RECEBER
+        function initWhatCarousel() {
+            const container = document.getElementById('what-carousel');
+            if (!container) return;
+
+            const track = container.querySelector('.what-carousel-track');
+            if (!track) return;
+
+            const slides = Array.from(track.children);
+            const nextBtn = container.querySelector('.what-carousel-arrow.next');
+            const prevBtn = container.querySelector('.what-carousel-arrow.prev');
+            const dots = Array.from(container.querySelectorAll('.what-carousel-dots .dot'));
+
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+            let startPos = 0;
+            let currentTranslate = 0;
+            let prevTranslate = 0;
+            let isDragging = false;
+            let autoPlayInterval;
+
+            function setSlidePosition() {
+                track.style.transform = `translateX(${currentTranslate}px)`;
+            }
+
+            function updateDots() {
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                if (currentIndex < 0) currentIndex = totalSlides - 1;
+                if (currentIndex >= totalSlides) currentIndex = 0;
+
+                const slideWidth = slides[0].clientWidth;
+                currentTranslate = currentIndex * -slideWidth;
+                prevTranslate = currentTranslate;
+                track.style.transition = 'transform 0.4s ease-out';
+                setSlidePosition();
+                updateDots();
+                resetAutoplay();
+            }
+
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+
+            function touchStart(index) {
+                return function (event) {
+                    isDragging = true;
+                    startPos = getPositionX(event);
+                    track.style.transition = 'none';
+                    clearInterval(autoPlayInterval);
+                }
+            }
+
+            function touchMove(event) {
+                if (isDragging) {
+                    const currentPosition = getPositionX(event);
+                    const diff = currentPosition - startPos;
+                    currentTranslate = prevTranslate + diff;
+                    setSlidePosition();
+                }
+            }
+
+            function touchEnd() {
+                isDragging = false;
+                const movedBy = currentTranslate - prevTranslate;
+
+                if (movedBy < -40 && currentIndex < totalSlides - 1) {
+                    currentIndex += 1;
+                } else if (movedBy > 40 && currentIndex > 0) {
+                    currentIndex -= 1;
+                } else if (movedBy < -40 && currentIndex === totalSlides - 1) {
+                    currentIndex = 0;
+                } else if (movedBy > 40 && currentIndex === 0) {
+                    currentIndex = totalSlides - 1;
+                }
+
+                goToSlide(currentIndex);
+            }
+
+            function getPositionX(event) {
+                return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+            }
+
+            slides.forEach((slide, index) => {
+                const img = slide.querySelector('img');
+                if (img) img.addEventListener('dragstart', (e) => e.preventDefault());
+
+                slide.addEventListener('touchstart', touchStart(index), { passive: true });
+                slide.addEventListener('touchend', touchEnd);
+                slide.addEventListener('touchmove', touchMove, { passive: true });
+
+                slide.addEventListener('mousedown', touchStart(index));
+                slide.addEventListener('mouseup', touchEnd);
+                slide.addEventListener('mouseleave', () => {
+                    if (isDragging) touchEnd();
+                });
+                slide.addEventListener('mousemove', touchMove);
+            });
+
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+            });
+
+            window.addEventListener('resize', () => {
+                track.style.transition = 'none';
+                goToSlide(currentIndex);
+            });
+
+            function startAutoplay() {
+                autoPlayInterval = setInterval(nextSlide, 7000);
+            }
+
+            function resetAutoplay() {
+                clearInterval(autoPlayInterval);
+                startAutoplay();
+            }
+
+            setTimeout(() => {
+                goToSlide(0);
+            }, 100);
+        }
+
         // Executa ao carregar a página
         document.addEventListener("DOMContentLoaded", () => {
             updatePromoDate();
             initFAQ();
             initCarousel();
+            initWhatCarousel();
         });
     </script>
 
