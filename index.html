@@ -540,6 +540,22 @@
                 border-radius: 18px !important;
                 overflow: hidden !important;
                 display: block !important;
+                clip-path: inset(0 round 18px) !important;
+                -webkit-clip-path: inset(0 round 18px) !important;
+            }
+
+            .what-carousel-track {
+                border-radius: 18px !important;
+            }
+
+            .what-carousel-slide.active,
+            .what-carousel-slide.current {
+                border-radius: 18px !important;
+            }
+
+            .what-carousel-slide.active img,
+            .what-carousel-slide.current img {
+                border-radius: 18px !important;
             }
 
             .what-carousel-dots {
@@ -1607,6 +1623,26 @@
 
             .testimonial-carousel-container .carousel-arrow.next {
                 right: -6px !important;
+            }
+
+            /* Remover sombras e filtros na seção de depoimentos */
+            .testimonial-carousel-container,
+            .testimonial-carousel-viewport,
+            .testimonial-carousel-track,
+            .testimonial-carousel-slide,
+            .testimonial-img,
+            .testimonials-section img {
+                box-shadow: none !important;
+                filter: none !important;
+                text-shadow: none !important;
+                background: transparent !important;
+            }
+
+            .testimonials-section::before,
+            .testimonials-section::after,
+            .testimonial-carousel-container::before,
+            .testimonial-carousel-container::after {
+                display: none !important;
             }
         }
 
